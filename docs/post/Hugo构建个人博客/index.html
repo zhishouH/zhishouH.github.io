@@ -140,15 +140,14 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#安装hugo">安装Hugo</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#安装hugo">安装Hugo</a></li>
     <li><a href="#生成站点">生成站点</a></li>
     <li><a href="#创建文章">创建文章</a></li>
     <li><a href="#安装皮肤">安装皮肤</a></li>
     <li><a href="#运行hugo">运行Hugo</a></li>
+    <li><a href="#部署到github-pages">部署到GitHub pages</a></li>
+    <li><a href="#参考文章">参考文章</a></li>
+    <li><a href="#致谢">致谢</a></li>
   </ul>
 </nav>
     </div>
@@ -200,35 +199,22 @@
 <p>Hugo构建个人博客</p>
 </blockquote>
 <h2 id="安装hugo">安装Hugo</h2>
-<h4 id="二进制安装简单快速">二进制安装(简单、快速)</h4>
+<p>二进制安装(简单、快速)</p>
 <p>到<a href="https://github.com/gohugoio/hugo/releases"> Hugo Releases</a>下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe)</p>
 <h2 id="生成站点">生成站点</h2>
-<p>使用Hugo快速生成站点，比如希望生成到**/e/Desktop/site**路径：</p>
-<p><code>$hugo new site /e/Desktop/site</code></p>
-<p>这样就在**/e/Desdktop/site**目录里生成了初始站点，进去目录：</p>
+<p>使用Hugo快速生成站点，比如希望生成到<strong>e/Desktop/site</strong>路径：</p>
+<p><code>$ hugo new site /e/Desktop/site</code></p>
+<p>这样就在<strong>e/Desdktop/site</strong>目录里生成了初始站点，进去目录：</p>
 <p><code>cd /e/Desktop/site</code></p>
 <p>站点目录：</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-apl" data-lang="apl"><span style="color:#000;font-weight:bold">|-</span> <span style="color:#008080">archetypes</span>
-<span style="color:#000;font-weight:bold">|-</span> <span style="color:#008080">content</span>
-<span style="color:#000;font-weight:bold">|-</span> <span style="color:#008080">data</span>
-<span style="color:#000;font-weight:bold">|-</span> <span style="color:#008080">layouts</span>
-<span style="color:#000;font-weight:bold">|-</span> <span style="color:#008080">static</span>
-<span style="color:#000;font-weight:bold">|-</span> <span style="color:#008080">themes</span>
-<span style="color:#000;font-weight:bold">|-</span> <span style="color:#008080">config</span><span style="color:#008080">.</span><span style="color:#008080">toml</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="创建文章">创建文章</h2>
+<pre><code>|- archetypes
+|- content
+|- data
+|- layouts
+|- static
+|- themes
+|- config.toml
+</code></pre><h2 id="创建文章">创建文章</h2>
 <p>创建一个<strong>about</strong>页面：</p>
 <p><code>$ hugo new about/index.md</code></p>
 <p><strong>index.md</strong>生成到了<strong>content/about/index.md</strong></p>
@@ -238,6 +224,18 @@
 <h2 id="运行hugo">运行Hugo</h2>
 <p>在站点根目录执行<code>hugo server</code>命令进行调试</p>
 <p>浏览器里打开 <code> http://localhost:1313/</code></p>
+<h2 id="部署到github-pages">部署到GitHub pages</h2>
+<p>首先在GitHub上创建一个Repository，命名为：<code>coderzh.github.io</code> （coderzh替换为github用户名）</p>
+<p>在站点根目录执行 <code>Hugo</code> 命令生成最终页面：</p>
+<p><code>$ hugo --theme=maupassant --baseUrl=&quot;http://coderzh.github.io/&quot;</code></p>
+<h2 id="参考文章">参考文章</h2>
+<ul>
+<li><a href="https://www.gohugo.org/">Hugo中文文档</a></li>
+<li><a href="https://www.zhihu.com/question/31377141/answer/384465402">github怎么绑定自己的域名？</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1834230">hugo博客使用 utterances 作为评论系统</a></li>
+</ul>
+<h2 id="致谢">致谢</h2>
+<p><strong>特别感谢博客构建之路上帮我解决问题的哥哥——<a href="https://huangweiliang.com/about/">黄伟亮</a></strong></p>
 
         </div>
 
