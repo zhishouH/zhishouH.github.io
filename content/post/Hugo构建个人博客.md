@@ -43,7 +43,7 @@ draft: false
 
 ## 安装皮肤
 
-技术型博客主题[maupassant-hugo](https://github.com/flysnow-org/maupassant-hugo)
+技术型博客主题[maupassant](https://github.com/flysnow-org/maupassant-hugo)
 
 `git clone https://github.com/flysnow-org/maupassant-hugo themes/maupassant`
 
