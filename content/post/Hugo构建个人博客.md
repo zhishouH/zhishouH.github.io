@@ -69,4 +69,5 @@ draft: false
 
 ## 致谢
 
-**特别感谢博客构建之路上帮我解决问题的哥哥——[黄伟亮](https://huangweiliang.com/about/)**
+**特别感谢为我提供帮助的哥哥——[hellowillian21](https://huangweiliang.com/about/)**
+
