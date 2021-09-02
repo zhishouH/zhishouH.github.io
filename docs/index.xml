@@ -9,37 +9,37 @@
     <lastBuildDate>Fri, 27 Aug 2021 11:26:47 +0800</lastBuildDate><atom:link href="https://huangzhishou.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo构建个人博客</title>
-      <link>https://huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</link>
       <pubDate>Fri, 27 Aug 2021 11:26:47 +0800</pubDate>
       
-      <guid>https://huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</guid>
       <description>Hugo构建个人博客 安装Hugo 二进制安装(简单、快速) 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/site路径： $ hugo new site /e/Desktop/site 这样就在e/Desdktop/si</description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>https://huangzhishou.com/about/</link>
+      <link>https://huangzhishou.com/about.html</link>
       <pubDate>Fri, 27 Aug 2021 11:20:28 +0800</pubDate>
       
-      <guid>https://huangzhishou.com/about/</guid>
+      <guid>https://huangzhishou.com/about.html</guid>
       <description>👋你好呀 我的名字叫黄智守 爱好JavaScript 🌱最近正在学习 《JavaScript高级程序设计(第4版)》 《Vue.js开发实战》 📫 如何联系我 微信：LaO_Huang_Z19 邮箱：zhishouhuang@gmail.com</description>
     </item>
     
     <item>
       <title>归档</title>
-      <link>https://huangzhishou.com/archives/</link>
+      <link>https://huangzhishou.com/archives.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://huangzhishou.com/archives/</guid>
+      <guid>https://huangzhishou.com/archives.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>搜索</title>
-      <link>https://huangzhishou.com/search/</link>
+      <link>https://huangzhishou.com/search.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://huangzhishou.com/search/</guid>
+      <guid>https://huangzhishou.com/search.html</guid>
       <description></description>
     </item>
     
