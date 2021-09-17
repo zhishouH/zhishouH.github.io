@@ -69,6 +69,12 @@ name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协�
 lineNos = true
 style = "github"
 
+## 配置分类
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+
 ## 配置网站菜单
 
 [menu]
