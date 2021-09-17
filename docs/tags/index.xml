@@ -5,6 +5,16 @@
     <link>https://huangzhishou.com/tags.html</link>
     <description>Recent content in Tags on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://huangzhishou.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 17 Sep 2021 19:26:29 +0800</lastBuildDate><atom:link href="https://huangzhishou.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vscode</title>
+      <link>https://huangzhishou.com/tags/vscode.html</link>
+      <pubDate>Fri, 17 Sep 2021 19:26:29 +0800</pubDate>
+      
+      <guid>https://huangzhishou.com/tags/vscode.html</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
