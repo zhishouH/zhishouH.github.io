@@ -2,8 +2,6 @@
 title: "在windows下，vscode 1.60.0版本修改默认终端为git bash"
 date: 2021-09-17T19:26:29+08:00
 draft: false
-tags: [vscode]
-categories: [vscode]
 ---
 
 > 在windows下，vscode 1.60.0版本修改默认终端为git bash

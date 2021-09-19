@@ -5,16 +5,6 @@
     <link>https://huangzhishou.com/categories.html</link>
     <description>Recent content in Categories on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Fri, 17 Sep 2021 19:26:29 +0800</lastBuildDate><atom:link href="https://huangzhishou.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>vscode</title>
-      <link>https://huangzhishou.com/categories/vscode.html</link>
-      <pubDate>Fri, 17 Sep 2021 19:26:29 +0800</pubDate>
-      
-      <guid>https://huangzhishou.com/categories/vscode.html</guid>
-      <description></description>
-    </item>
-    
+    <language>zh-CN</language><atom:link href="https://huangzhishou.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
