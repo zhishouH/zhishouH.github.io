@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>黄智守的博客</title>
-    <link>https://www.huangzhishou.com/</link>
+    <link>https://huangzhishou.com/</link>
     <description>Recent content on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 17 Sep 2021 19:26:29 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Sep 2021 19:26:29 +0800</lastBuildDate><atom:link href="https://huangzhishou.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在windows下，vscode 1.60.0版本修改默认终端为git bash</title>
-      <link>https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html</link>
+      <link>https://huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html</link>
       <pubDate>Fri, 17 Sep 2021 19:26:29 +0800</pubDate>
       
-      <guid>https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html</guid>
+      <guid>https://huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html</guid>
       <description>在windows下，vscode 1.60.0版本修改默认终端为git bash 在windows下，更新了1.60.0版本的vscode后，原有的修改默认终端的配置失效了。 下面为您展示如何在新版本的vscode中修改默认的终端为git bash: 一、找到settings.json配置文件 二、添加配置</description>
     </item>
     
     <item>
       <title>Hugo构建个人博客</title>
-      <link>https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</link>
+      <link>https://huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</link>
       <pubDate>Fri, 27 Aug 2021 11:26:47 +0800</pubDate>
       
-      <guid>https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</guid>
+      <guid>https://huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</guid>
       <description>Hugo构建个人博客 安装Hugo 二进制安装(简单、快速) 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/site路径： $ hugo new site /e/Desktop/site 这样就在e/Desdktop/si</description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>https://www.huangzhishou.com/about.html</link>
+      <link>https://huangzhishou.com/about.html</link>
       <pubDate>Fri, 27 Aug 2021 11:20:28 +0800</pubDate>
       
-      <guid>https://www.huangzhishou.com/about.html</guid>
+      <guid>https://huangzhishou.com/about.html</guid>
       <description>👋你好呀 我的名字叫黄智守 爱好JavaScript 🌱最近正在学习 《JavaScript高级程序设计(第4版)》 《Vue.js开发实战》 📫 如何联系我 微信：LaO_Huang_Z19 邮箱：zhishouhuang@gmail.com</description>
     </item>
     
     <item>
       <title>归档</title>
-      <link>https://www.huangzhishou.com/archives.html</link>
+      <link>https://huangzhishou.com/archives.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.huangzhishou.com/archives.html</guid>
+      <guid>https://huangzhishou.com/archives.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>搜索</title>
-      <link>https://www.huangzhishou.com/search.html</link>
+      <link>https://huangzhishou.com/search.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.huangzhishou.com/search.html</guid>
+      <guid>https://huangzhishou.com/search.html</guid>
       <description></description>
     </item>
     
