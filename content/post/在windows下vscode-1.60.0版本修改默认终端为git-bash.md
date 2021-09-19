@@ -38,9 +38,7 @@ draft: false
 
 ![image-20210907114834592](在windows下vscode-1.60.0版本修改默认终端为git-bash.assets/image-20210907114834592.png)
 
-## 转载于
+------
 
-**原文作者：[黄伟亮](https://www.huangweiliang.com/)**
-
-**原文链接：**[https://www.huangweiliang.com/post/windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html](https://www.huangweiliang.com/post/windows下vscode-1.60.0版本修改默认终端为git-bash.html)
+**转载于：**[https://www.huangweiliang.com/post/windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html](https://www.huangweiliang.com/post/windows下vscode-1.60.0版本修改默认终端为git-bash.html)
 
