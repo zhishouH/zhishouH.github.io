@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 黄智守的博客</title>
-    <link>https://huangzhishou.com/categories.html</link>
+    <link>https://www.huangzhishou.com/categories.html</link>
     <description>Recent content in Categories on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://huangzhishou.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language><atom:link href="https://www.huangzhishou.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

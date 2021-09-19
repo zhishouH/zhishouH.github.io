@@ -1,4 +1,4 @@
-baseURL = "https://huangzhishou.com/" 
+baseURL = "https://www.huangzhishou.com/" 
 googleAnalytics = "" # UA-XXXXXXXX-X
 languageCode = "zh-CN" 
 publishDir = "docs" 
