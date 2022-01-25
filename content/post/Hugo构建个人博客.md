@@ -10,17 +10,17 @@ draft: false
 
 二进制安装(简单、快速)
 
-到[ Hugo Releases](https://github.com/gohugoio/hugo/releases)下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe)
+到[ Hugo Releases](https://github.com/gohugoio/hugo/releases)下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe)![微信截图_20220125175915](Hugo构建个人博客.assets/微信截图_20220125175915.png)
 
 ## 生成站点
 
 使用Hugo快速生成站点，比如希望生成到**e/Desktop/site**路径：
 
-`$ hugo new site /e/Desktop/site`
+`$ hugo new site /e/Desktop/zhishouH`
 
 这样就在**e/Desdktop/site**目录里生成了初始站点，进去目录：
 
-`cd /e/Desktop/site`
+`cd /e/Desktop/zhishouH`
 
 站点目录：
 ```
@@ -66,8 +66,4 @@ draft: false
 - [Hugo中文文档](https://www.gohugo.org/)
 - [github怎么绑定自己的域名？](https://www.zhihu.com/question/31377141/answer/384465402)
 - [hugo博客使用 utterances 作为评论系统](https://cloud.tencent.com/developer/article/1834230)
-
-## 致谢
-
-**特别感谢为我提供帮助的哥哥——[hellowillian21](https://huangweiliang.com/about/)**
 
