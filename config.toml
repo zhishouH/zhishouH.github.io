@@ -1,5 +1,5 @@
 baseURL = "https://www.huangzhishou.com/" 
-googleAnalytics = "" # UA-XXXXXXXX-X
+googleAnalytics = "G-XHTRYTT5N1" # UA-XXXXXXXX-X
 languageCode = "zh-CN" 
 publishDir = "docs" 
 theme = "maupassant" 
@@ -55,7 +55,7 @@ url = "https://www.duckweeds7.com/"
 [params.utteranc]
 enable = true 
 issueTerm = "pathname" 
-repo = "zhishouH/zhishouH.github.io" ##换成自己得
+repo = "zhishouH/zhishouH.github.io" ##换成自己的
 theme = "github-light" 
 
 ## 开启版权声明，协议名字和链接都可以换
@@ -76,11 +76,11 @@ style = "github"
 [[menu.main]]
 identifier = "archives"
 name = "归档"
-url = "/archives/"
+url = "/archives.html"
 weight = 2
 
 [[menu.main]]
 identifier = "about"
 name = "关于"
-url = "/about/"
+url = "/about.html"
 weight = 3
