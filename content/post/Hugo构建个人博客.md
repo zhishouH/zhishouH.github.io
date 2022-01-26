@@ -3,20 +3,25 @@ title: "Hugo构建个人博客"
 date: 2021-08-27T11:26:47+08:00
 draft: false
 tags: [博客]
-categories: [博客]
 ---
 
 > 博客构建之路
 
-### 安装Hugo
+### 一、安装Hugo
 
-二进制安装(简单、快速)
+- 到[ Hugo Releases](https://github.com/gohugoio/hugo/releases)下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe)
 
-到[ Hugo Releases](https://github.com/gohugoio/hugo/releases)下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe)![微信截图_20220125175915](Hugo构建个人博客.assets/微信截图_20220125175915.png)
+![微信截图_20220126114027](Hugo构建个人博客.assets/微信截图_20220126114027.png)
 
-## 生成站点
+- 配置环境变量
 
-使用Hugo快速生成站点，比如希望生成到**e/Desktop/site**路径：
+  ![微信截图_20220126113713](Hugo构建个人博客.assets/微信截图_20220126113713.png)
+
+  
+
+### 二、生成站点
+
+使用Hugo快速生成站点，比如希望生成到**e/Desktop/zhishouH**路径：
 
 `$ hugo new site /e/Desktop/zhishouH`
 
@@ -35,27 +40,35 @@ categories: [博客]
 |- config.toml
 ```
 
-## 创建文章
 
-创建一个**about**页面：
 
-`$ hugo new about/index.md`
+### 三、创建文章
 
-**index.md**生成到了**content/about/index.md**
+创建一篇文章：
 
-## 安装皮肤
+`$ hugo new post/关于hugo.md`
 
-技术型博客主题[maupassant](https://github.com/flysnow-org/maupassant-hugo)
+**index.md**生成到了**content/post/关于hugo.md**	
+
+
+
+### 四、安装皮肤
+
+技术型博客主题[maupassant](https://github.com/flysnow-org/maupassant-hugo)(关于更多主题介绍在github里)
 
 `git clone https://github.com/flysnow-org/maupassant-hugo themes/maupassant`
 
-## 运行Hugo
+
+
+### 五、运行Hugo
 
 在站点根目录执行`hugo server`命令进行调试
 
 浏览器里打开 ` http://localhost:1313/`
 
-## 部署到GitHub pages
+
+
+### 六、部署到GitHub pages
 
 首先在GitHub上创建一个Repository，命名为：`coderzh.github.io` （coderzh替换为github用户名）
 
@@ -63,9 +76,10 @@ categories: [博客]
 
 `$ hugo --theme=maupassant --baseUrl="http://coderzh.github.io/"`
 
-## 参考文章
+
+
+### 参考文章
 
 - [Hugo中文文档](https://www.gohugo.org/)
 - [github怎么绑定自己的域名？](https://www.zhihu.com/question/31377141/answer/384465402)
 - [hugo博客使用 utterances 作为评论系统](https://cloud.tencent.com/developer/article/1834230)
-

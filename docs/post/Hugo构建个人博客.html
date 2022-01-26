@@ -82,13 +82,6 @@
             2021年8月27日
         </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/%E5%8D%9A%E5%AE%A2'>博客</a></span>
-            
-        </div>
-        
         
         <div class="post-meta">
             <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
@@ -100,15 +93,27 @@
             <blockquote>
 <p>博客构建之路</p>
 </blockquote>
-<h3 id="安装hugo">安装Hugo</h3>
-<p>二进制安装(简单、快速)</p>
-<p>到<a href="https://github.com/gohugoio/hugo/releases"> Hugo Releases</a>下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe)
-        <a data-fancybox="gallery" href="Hugo%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2.assets/%e5%be%ae%e4%bf%a1%e6%88%aa%e5%9b%be_20220125175915.png">
-            <img class="mx-auto" alt="微信截图_20220125175915" src="Hugo%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2.assets/%e5%be%ae%e4%bf%a1%e6%88%aa%e5%9b%be_20220125175915.png" />
+<h3 id="一安装hugo">一、安装Hugo</h3>
+<ul>
+<li>到<a href="https://github.com/gohugoio/hugo/releases"> Hugo Releases</a>下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe)</li>
+</ul>
+<p>
+        <a data-fancybox="gallery" href="Hugo%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2.assets/%e5%be%ae%e4%bf%a1%e6%88%aa%e5%9b%be_20220126114027.png">
+            <img class="mx-auto" alt="微信截图_20220126114027" src="Hugo%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2.assets/%e5%be%ae%e4%bf%a1%e6%88%aa%e5%9b%be_20220126114027.png" />
         </a>
     </p>
-<h2 id="生成站点">生成站点</h2>
-<p>使用Hugo快速生成站点，比如希望生成到<strong>e/Desktop/site</strong>路径：</p>
+<ul>
+<li>
+<p>配置环境变量</p>
+<p>
+        <a data-fancybox="gallery" href="Hugo%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2.assets/%e5%be%ae%e4%bf%a1%e6%88%aa%e5%9b%be_20220126113713.png">
+            <img class="mx-auto" alt="微信截图_20220126113713" src="Hugo%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2.assets/%e5%be%ae%e4%bf%a1%e6%88%aa%e5%9b%be_20220126113713.png" />
+        </a>
+    </p>
+</li>
+</ul>
+<h3 id="二生成站点">二、生成站点</h3>
+<p>使用Hugo快速生成站点，比如希望生成到<strong>e/Desktop/zhishouH</strong>路径：</p>
 <p><code>$ hugo new site /e/Desktop/zhishouH</code></p>
 <p>这样就在<strong>e/Desdktop/site</strong>目录里生成了初始站点，进去目录：</p>
 <p><code>cd /e/Desktop/zhishouH</code></p>
@@ -120,21 +125,21 @@
 |- static
 |- themes
 |- config.toml
-</code></pre><h2 id="创建文章">创建文章</h2>
-<p>创建一个<strong>about</strong>页面：</p>
-<p><code>$ hugo new about/index.md</code></p>
-<p><strong>index.md</strong>生成到了<strong>content/about/index.md</strong></p>
-<h2 id="安装皮肤">安装皮肤</h2>
-<p>技术型博客主题<a href="https://github.com/flysnow-org/maupassant-hugo">maupassant</a></p>
+</code></pre><h3 id="三创建文章">三、创建文章</h3>
+<p>创建一篇文章：</p>
+<p><code>$ hugo new post/关于hugo.md</code></p>
+<p><strong>index.md</strong>生成到了<strong>content/post/关于hugo.md</strong></p>
+<h3 id="四安装皮肤">四、安装皮肤</h3>
+<p>技术型博客主题<a href="https://github.com/flysnow-org/maupassant-hugo">maupassant</a>(关于更多主题介绍在github里)</p>
 <p><code>git clone https://github.com/flysnow-org/maupassant-hugo themes/maupassant</code></p>
-<h2 id="运行hugo">运行Hugo</h2>
+<h3 id="五运行hugo">五、运行Hugo</h3>
 <p>在站点根目录执行<code>hugo server</code>命令进行调试</p>
 <p>浏览器里打开 <code> http://localhost:1313/</code></p>
-<h2 id="部署到github-pages">部署到GitHub pages</h2>
+<h3 id="六部署到github-pages">六、部署到GitHub pages</h3>
 <p>首先在GitHub上创建一个Repository，命名为：<code>coderzh.github.io</code> （coderzh替换为github用户名）</p>
 <p>在站点根目录执行 <code>Hugo</code> 命令生成最终页面：</p>
 <p><code>$ hugo --theme=maupassant --baseUrl=&quot;http://coderzh.github.io/&quot;</code></p>
-<h2 id="参考文章">参考文章</h2>
+<h3 id="参考文章">参考文章</h3>
 <ul>
 <li><a href="https://www.gohugo.org/">Hugo中文文档</a></li>
 <li><a href="https://www.zhihu.com/question/31377141/answer/384465402">github怎么绑定自己的域名？</a></li>
@@ -265,8 +270,6 @@
     <section class="widget">
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
-    
-    <li><a href="https://www.huangzhishou.com/categories/%E5%8D%9A%E5%AE%A2.html">博客 (1)</a></li>
     
 </ul>
     </section>
