@@ -9,20 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>搜索 | 黄智守的博客</title>
-    <meta property="og:title" content="搜索 - 黄智守的博客">
+    <title>React | 黄智守的博客</title>
+    <meta property="og:title" content="React - 黄智守的博客">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="JavaScript、Vue、HTML、CSS、黄智守">
-    <meta name="description" content="搜索页面">
+    <meta name="description" content="React">
         
     <meta name="author" content="黄智守">
-    <meta property="og:url" content="https://www.huangzhishou.com/search.html">
+    <meta property="og:url" content="https://www.huangzhishou.com/categories/React.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml" href="https://www.huangzhishou.com/categories/React/index.xml" title="黄智守的博客" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -69,71 +70,46 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
     <h3 class="archive-title">
-        搜索
-        <span class="keyword">哈哈</span>
-        的结果
+        分类
+        <span class="keyword">React</span>
+        中的文章
     </h3>
+    
 
+    
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="链接">标题</a>
+                <a href="https://www.huangzhishou.com/post/Learn-React-01.html">Learn React 01</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2019年12月01日
+            2022年1月26日
         </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='/categories/React'>React</a>
+            
+        </div>
+        
         <div class="post-content">
-            概要……
-            <p class="readmore"><a href="链接">阅读全文</a></p>
+            React 基础语法 1、万物皆可HelloWorld 1 2 3 4 // 1.创建虚拟DOM const VDOM = &lt;h1&gt;HelloWorld&lt;h1/&gt; // 2.渲染虚拟DOM到页面 ReactDOM.render(VDOM,document.getElementById(&#39;app&#39;)) 完整代码：HelloWorld 2、虚拟DOM的两种创建方式 使用jsx创建虚拟DOM 1 2 3 4 5 6 7 8 // 1.创建虚拟DOM const VDOM = ( &lt;h1 id=&#34;title&#34;&gt; &lt;span&gt;hello react&lt;/span&gt; &lt;/h1&gt; ) // 2.渲染虚拟DOM到页面 ReactDOM.render(VDOM, document.getElementById(&#39;app&#39;)) 完整代……
+            <p class="readmore"><a href="https://www.huangzhishou.com/post/Learn-React-01.html">阅读全文</a></p>
         </div>
     </article>
+    
+
+    
+
+
+
+
 
 </div>
-
-<script type="text/javascript">
-
-    var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-            }
-        }
-    };
-
-    $(document).ready(function () {
-        var q = getUrlParameter("q");
-        $("span.keyword").text(q);
-        $("article.post").remove();
-        $.ajax({
-            url: 'https:\/\/www.huangzhishou.com\/index.xml',
-            dataType: "xml",
-            success: function (data) {
-                $(data).find("item").each(function () {
-                    var item = $(this);
-                    var title = item.find("title").text();
-                    if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
-                        var url = item.find("link").text();
-                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `">` + title + `</a></h1></header>`;
-                        var pubDate = new Date(item.find("pubDate").text())
-                        searchItem += `<date class="post-meta meta-date">` + pubDate.getFullYear() + `年` + (pubDate.getMonth() + 1) + `月` + pubDate.getDate() + `日</date>`;
-                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `">阅读全文</a></p></div></article>`;
-
-                        $("div.res-cons").append(searchItem);
-                    }
-                });
-            }
-        });
-    });
-</script>
 
                     <footer id="footer">
     <div>
@@ -147,16 +123,6 @@
 </footer>
 
 
-
-<script type="text/javascript">
-    window.MathJax = {
-        tex2jax: {
-            inlineMath: [['$', '$']],
-            processEscapes: true
-        }
-    };
-</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>

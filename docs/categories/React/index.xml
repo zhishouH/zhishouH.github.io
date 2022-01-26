@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on 黄智守的博客</title>
+    <link>https://www.huangzhishou.com/categories/React.html</link>
+    <description>Recent content in React on 黄智守的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 26 Jan 2022 13:34:02 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/React/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn React 01</title>
+      <link>https://www.huangzhishou.com/post/Learn-React-01.html</link>
+      <pubDate>Wed, 26 Jan 2022 13:34:02 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/Learn-React-01.html</guid>
+      <description>React 基础语法 1、万物皆可HelloWorld 1 2 3 4 // 1.创建虚拟DOM const VDOM = &amp;lt;h1&amp;gt;HelloWorld&amp;lt;h1/&amp;gt; // 2.渲染虚拟DOM到页面 ReactDOM.render(VDOM,document.getElementById(&amp;#39;app&amp;#39;)) 完整代码：HelloWorld 2、虚拟DOM的两种创建方式 使用jsx创建虚拟DOM 1 2 3 4 5 6 7 8 // 1.创建虚拟DOM const VDOM = ( &amp;lt;h1 id=&amp;#34;title&amp;#34;&amp;gt; &amp;lt;span&amp;gt;hello react&amp;lt;/span&amp;gt; &amp;lt;/h1&amp;gt; ) // 2.渲染虚拟DOM到页面 ReactDOM.render(VDOM, document.getElementById(&amp;#39;app&amp;#39;)) 完整代</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>Learn React 01 | 黄智守的博客</title>
+    <meta property="og:title" content="Learn React 01 - 黄智守的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2022-01-26T13:34:02&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2022-01-26T13:34:02&#43;08:00'>
+        
+    <meta name="Keywords" content="JavaScript、Vue、HTML、CSS、黄智守">
+    <meta name="description" content="Learn React 01">
+        
+    <meta name="author" content="黄智守">
+    <meta property="og:url" content="https://www.huangzhishou.com/post/Learn-React-01.html">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.huangzhishou.com/">
+                        黄智守的博客
+                    </a>
+                
+                <p class="description">专注于JavaScript、Vue、HTML、CSS</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.huangzhishou.com/">首页</a>
+                    
+                    <a  href="https://www.huangzhishou.com/archives.html" title="归档">归档</a>
+                    
+                    <a  href="https://www.huangzhishou.com/about.html" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Learn React 01</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年1月26日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/React'>React</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <blockquote>
+<p>React  基础语法</p>
+</blockquote>
+<h4 id="1万物皆可helloworld">1、万物皆可HelloWorld</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#998;font-style:italic">// 1.创建虚拟DOM
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> VDOM <span style="color:#000;font-weight:bold">=</span> &lt;<span style="color:#000080">h1</span>&gt;HelloWorld&lt;<span style="color:#000080">h1</span>/&gt;    
+<span style="color:#998;font-style:italic">// 2.渲染虚拟DOM到页面
+</span><span style="color:#998;font-style:italic"></span>ReactDOM.render(VDOM,<span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/01-hello-world/index.html">HelloWorld</a></p>
+<h4 id="2虚拟dom的两种创建方式">2、虚拟DOM的两种创建方式</h4>
+<ul>
+<li>
+<p>使用jsx创建虚拟DOM</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#998;font-style:italic">// 1.创建虚拟DOM
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> VDOM <span style="color:#000;font-weight:bold">=</span> (
+  &lt;<span style="color:#000080">h1</span> <span style="color:#008080">id</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;title&#34;</span>&gt;
+      &lt;<span style="color:#000080">span</span>&gt;hello react&lt;/<span style="color:#000080">span</span>&gt;
+  &lt;/<span style="color:#000080">h1</span>&gt;
+)
+<span style="color:#998;font-style:italic">// 2.渲染虚拟DOM到页面
+</span><span style="color:#998;font-style:italic"></span>ReactDOM.render(VDOM, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/1-%E4%BD%BF%E7%94%A8jsx%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9FDOM.html">使用jsx创建虚拟DOM</a></p>
+</li>
+<li>
+<p>使用js创建虚拟DOM</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#998;font-style:italic">// 1.创建虚拟DOM
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> VDOM <span style="color:#000;font-weight:bold">=</span> React.createElement(<span style="color:#d14">&#39;h1&#39;</span>, { id<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;title&#39;</span> }, <span style="color:#d14">&#39;hello react&#39;</span>)
+<span style="color:#998;font-style:italic">// 2.渲染虚拟DOM到页面
+</span><span style="color:#998;font-style:italic"></span>ReactDOM.render(VDOM, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/2-%E4%BD%BF%E7%94%A8js%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9FDOM.html">使用js创建虚拟DOM</a></p>
+</li>
+<li>
+<p>虚拟DOM和真实DOM：</p>
+<p>虚拟DOM本质上是Object类型的对象(一般对象)</p>
+<p>虚拟DOM比较“轻”，真实DOM比较“重”，因为虚拟DOM是React内部在用，无需真实DOM上那么多的属性</p>
+<p>虚拟DOM最终会被React转化为真实DOM，呈现在页面上</p>
+<p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/3-%E8%99%9A%E6%8B%9FDOM%E5%92%8C%E7%9C%9F%E5%AE%9EDOM.html">虚拟DOM和真实DOM</a></p>
+</li>
+</ul>
+<h4 id="3jsx语法规则">3、jsx语法规则</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#000;font-weight:bold">const</span> myId <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;title&#34;</span>
+<span style="color:#000;font-weight:bold">const</span> myData <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hello-World&#34;</span>
+<span style="color:#998;font-style:italic">// 1、创建虚拟dom
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">const</span> VDOM <span style="color:#000;font-weight:bold">=</span> (
+  &lt;<span style="color:#000080">h2</span> <span style="color:#008080">className</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;vdom&#34;</span> <span style="color:#008080">id</span><span style="color:#000;font-weight:bold">=</span>{myId}&gt;
+     &lt;<span style="color:#000080">span</span> <span style="color:#008080">style</span><span style="color:#000;font-weight:bold">=</span>{{ color<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;tomato &#34;</span>, fontSize<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;40px&#34;</span> }}&gt;{myData}&lt;/<span style="color:#000080">span</span>&gt;
+  &lt;/<span style="color:#000080">h2</span>&gt;
+)
+<span style="color:#998;font-style:italic">// 2、渲染到页面
+</span><span style="color:#998;font-style:italic"></span>ReactDOM.render(VDOM, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>1、定义虚拟dom时，不要写引号</p>
+</li>
+<li>
+<p>2、标签中混入js表达式要用{}</p>
+</li>
+<li>
+<p>3、样式中的类名不要用class,要用className</p>
+</li>
+<li>
+<p>4、内联样式要用style={{key:value,key:value}}的形式</p>
+</li>
+<li>
+<p>5、只能有一个根标签</p>
+</li>
+<li>
+<p>6、标签要闭合</p>
+</li>
+<li>
+<p>7、标签首字母</p>
+<p>​		小写字母开头，则将该标签转为html中同名元素，若html中无对应的则报错</p>
+<p>​		大写字母开头，react渲染对应的组件，若组件未定义则报错</p>
+</li>
+</ul>
+<p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/03-jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/index.html">jsx语法规则</a></p>
+<h4 id="4组件定义">4、组件定义</h4>
+<ul>
+<li>
+<p>函数式组件</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#998;font-style:italic">// 1、创建函数式组件
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">function</span> MyComponent() {
+  <span style="color:#000;font-weight:bold">return</span> (
+    &lt;<span style="color:#000080">h2</span>&gt;函数定义的组件&lt;/<span style="color:#000080">h2</span>&gt;
+  )
+}
+<span style="color:#998;font-style:italic">// 2、渲染组件到页面
+</span><span style="color:#998;font-style:italic"></span>ReactDOM.render(&lt;<span style="color:#000080">MyComponent</span> /&gt;, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/05-react%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/1-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6.html">函数式组件</a></p>
+</li>
+<li>
+<p>类式组件</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#998;font-style:italic">// 1、创建类式组件
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> React.Component {
+  render() {
+    console.log(<span style="color:#d14">&#34;render中的this&#34;</span>, <span style="color:#000;font-weight:bold">this</span>);
+    <span style="color:#000;font-weight:bold">return</span> (
+      &lt;<span style="color:#000080">h2</span>&gt;类式组件&lt;/<span style="color:#000080">h2</span>&gt;
+    )
+  }
+}
+<span style="color:#998;font-style:italic">// 2、渲染组件到页面
+</span><span style="color:#998;font-style:italic"></span>ReactDOM.render(&lt;<span style="color:#000080">MyComponent</span> /&gt;, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/05-react%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/2-%E7%B1%BB%E5%BC%8F%E7%BB%84%E4%BB%B6.html">类式组件</a></p>
+</li>
+</ul>
+<h4 id="5组件实例属性state">5、组件实例属性——state</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> React.Component {
+  state <span style="color:#000;font-weight:bold">=</span> { isHot<span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">true</span> }
+  render() {
+    <span style="color:#000;font-weight:bold">const</span> { isHot } <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>.state
+    <span style="color:#000;font-weight:bold">return</span> (
+      &lt;<span style="color:#000080">h1</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.changeWeather}&gt;今天天气很{isHot <span style="color:#000;font-weight:bold">?</span> <span style="color:#d14">&#39;炎热&#39;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;凉爽&#39;</span>}&lt;/<span style="color:#000080">h1</span>&gt;
+    )
+  }
+  changeWeather <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+    <span style="color:#000;font-weight:bold">const</span> { isHot } <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>.state
+    <span style="color:#000;font-weight:bold">this</span>.setState({ isHot<span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">!</span>isHot })
+  }
+}
+
+ReactDOM.render(&lt;<span style="color:#000080">MyComponent</span> /&gt;, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/tree/main/react-basic/06-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-state">组件实例属性——state</a></p>
+<h4 id="6组件实例属性props">6、组件实例属性——props</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#000;font-weight:bold">class</span> Person <span style="color:#000;font-weight:bold">extends</span> React.Component {
+<span style="color:#998;font-style:italic">// 构造器是否接收 props,是否传递props，却决于是否希望在构造器中通过this访问props
+</span><span style="color:#998;font-style:italic">// constructor(props) {
+</span><span style="color:#998;font-style:italic">//   console.log(props);
+</span><span style="color:#998;font-style:italic">//   super(props)
+</span><span style="color:#998;font-style:italic">// }
+</span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">static</span> propTypes <span style="color:#000;font-weight:bold">=</span> {
+    name<span style="color:#000;font-weight:bold">:</span> PropTypes.string.isRequired,
+    sex<span style="color:#000;font-weight:bold">:</span> PropTypes.string,
+    age<span style="color:#000;font-weight:bold">:</span> PropTypes.number
+  }
+  <span style="color:#000;font-weight:bold">static</span> defaultProps <span style="color:#000;font-weight:bold">=</span> {
+    sex<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;男&#34;</span>,
+    age<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">18</span>
+  }
+  render() {
+    <span style="color:#000;font-weight:bold">const</span> { name, sex, age } <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>.props
+    <span style="color:#000;font-weight:bold">return</span> (
+      &lt;<span style="color:#000080">ul</span>&gt;
+        &lt;<span style="color:#000080">li</span>&gt;{name}&lt;/<span style="color:#000080">li</span>&gt;
+        &lt;<span style="color:#000080">li</span>&gt;{sex}&lt;/<span style="color:#000080">li</span>&gt;
+        &lt;<span style="color:#000080">li</span>&gt;{age <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>}&lt;/<span style="color:#000080">li</span>&gt;
+      &lt;/<span style="color:#000080">ul</span>&gt;
+    )
+  }
+}
+<span style="color:#000;font-weight:bold">const</span> p <span style="color:#000;font-weight:bold">=</span> { name<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;zhishouH&#34;</span> }
+ReactDOM.render(&lt;<span style="color:#000080">Person</span> {<span style="color:#008080">...p</span>} /&gt;, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/tree/main/react-basic/07-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-props">组件实例属性——props</a></p>
+<h4 id="7组件实例属性refs">7、组件实例属性——refs</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#000;font-weight:bold">class</span> Demo <span style="color:#000;font-weight:bold">extends</span> React.Component {
+  showInput1 <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+  <span style="color:#000;font-weight:bold">const</span> { input1 } <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>.refs
+    alert(input1.value)
+  }
+  showInput2 <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+  <span style="color:#000;font-weight:bold">const</span> { input2 } <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>
+    alert(input2.value)
+  }
+  myRef <span style="color:#000;font-weight:bold">=</span> React.createRef()
+  showInput3 <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+    alert(<span style="color:#000;font-weight:bold">this</span>.myRef.current.value)
+  }
+  render() {
+    <span style="color:#000;font-weight:bold">return</span> (
+      &lt;<span style="color:#000080">div</span>&gt;
+        {<span style="color:#998;font-style:italic">/*字符串形式*/</span>}
+        &lt;<span style="color:#000080">input</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;text&#34;</span> <span style="color:#008080">ref</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;input1&#34;</span> <span style="color:#008080">placeholder</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;input1&#34;</span> /&gt;
+        &lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.showInput1}&gt;点击弹出input1的值&lt;/<span style="color:#000080">button</span>&gt;
+        {<span style="color:#998;font-style:italic">/*回调函数形式*/</span>}
+        &lt;<span style="color:#000080">input</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;text&#34;</span> <span style="color:#008080">ref</span><span style="color:#000;font-weight:bold">=</span>{(current) =&gt; { <span style="color:#000;font-weight:bold">this</span>.input2 <span style="color:#000;font-weight:bold">=</span> current }} <span style="color:#008080">placeholder</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;input2&#34;</span> /&gt;
+        &lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.showInput2} &gt;点击弹出input2的值&lt;/<span style="color:#000080">button</span>&gt;
+	    {<span style="color:#998;font-style:italic">/*createRef形式*/</span>}
+	    &lt;<span style="color:#000080">input</span> <span style="color:#008080">ref</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.myRef} <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;text&#34;</span> <span style="color:#008080">placeholder</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;input3&#34;</span> /&gt; 
+	    &lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.showInput3}&gt;点击弹出input3的值&lt;/<span style="color:#000080">button</span>&gt; 
+      &lt;/<span style="color:#000080">div</span>&gt;
+    )
+  }
+}
+ReactDOM.render(&lt;<span style="color:#000080">Demo</span> /&gt;, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>完整代码：<a href="https://github.com/zhishouH/learn-react/tree/main/react-basic/08-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E7%9A%84%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-refs">组件实例属性——refs</a></p>
+<h4 id="8事件处理">8、事件处理</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#000;font-weight:bold">class</span> Demo <span style="color:#000;font-weight:bold">extends</span> React.Component {
+  <span style="color:#998;font-style:italic">// event.target
+</span><span style="color:#998;font-style:italic"></span>  <span style="color:#998;font-style:italic">// event.preventDefault() 阻止默认事件 
+</span><span style="color:#998;font-style:italic"></span>  handleClick <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+    alert(<span style="color:#d14">&#34;点击了&#34;</span>)
+  }
+  render() {
+    <span style="color:#000;font-weight:bold">return</span> (
+      &lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.handleClick}&gt;按钮&lt;/<span style="color:#000080">button</span>&gt;
+    )
+  }
+}
+ReactDOM.render(&lt;<span style="color:#000080">Demo</span> /&gt;, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>React 事件的命名采用小驼峰式（camelCase），而不是纯小写。</li>
+<li>使用 JSX 语法时你需要传入一个函数作为事件处理函数，而不是一个字符串。</li>
+</ul>
+<p>完整代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/09-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/index.html">事件处理</a></p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.huangzhishou.com/">黄智守</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.huangzhishou.com/post/Learn-React-01.html">https://www.huangzhishou.com/post/Learn-React-01.html</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html">在windows下，vscode 1.60.0版本修改默认终端为git bash</a></li>
+        
+        <li><a href="/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">Hugo构建个人博客</a></li>
+        
+        <li><a href="/about.html">关于我</a></li>
+        
+        <li><a href="/archives.html">归档</a></li>
+        
+        <li><a href="/search.html">搜索</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/React'>React</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "zhishouH/zhishouH.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2022 <a href="https://www.huangzhishou.com/">黄智守的博客 </a>
+        
+    </div>
+    <br />
+    <div>
+        本站仅为本人的学习笔记，部分内容来自网络，如果侵权请联系删除，谢谢大家！
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [['$', '$']],
+            processEscapes: true
+        }
+    };
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search"
+      action='https://www.huangzhishou.com/search.html'
+      method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.huangzhishou.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/Learn-React-01.html" title="Learn React 01">Learn React 01</a>
+    </li>
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html" title="在windows下，vscode 1.60.0版本修改默认终端为git bash">在windows下，vscode 1.60.0版本修改默认终端为git bash</a>
+    </li>
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="Hugo构建个人博客">Hugo构建个人博客</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.huangzhishou.com/categories/React.html">React (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://www.huangzhishou.com/tags/React.html">React</a>
+    
+    <a href="https://www.huangzhishou.com/tags/%E5%8D%9A%E5%AE%A2.html">博客</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://huangweiliang.com/" title="黄伟亮的博客">黄伟亮的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://www.duckweeds7.com/" title="Duckweeds7">Duckweeds7</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.huangzhishou.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 17 Sep 2021 19:26:29 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jan 2022 13:34:02 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn React 01</title>
+      <link>https://www.huangzhishou.com/post/Learn-React-01.html</link>
+      <pubDate>Wed, 26 Jan 2022 13:34:02 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/Learn-React-01.html</guid>
+      <description>React 基础语法 1、万物皆可HelloWorld 1 2 3 4 // 1.创建虚拟DOM const VDOM = &amp;lt;h1&amp;gt;HelloWorld&amp;lt;h1/&amp;gt; // 2.渲染虚拟DOM到页面 ReactDOM.render(VDOM,document.getElementById(&amp;#39;app&amp;#39;)) 完整代码：HelloWorld 2、虚拟DOM的两种创建方式 使用jsx创建虚拟DOM 1 2 3 4 5 6 7 8 // 1.创建虚拟DOM const VDOM = ( &amp;lt;h1 id=&amp;#34;title&amp;#34;&amp;gt; &amp;lt;span&amp;gt;hello react&amp;lt;/span&amp;gt; &amp;lt;/h1&amp;gt; ) // 2.渲染虚拟DOM到页面 ReactDOM.render(VDOM, document.getElementById(&amp;#39;app&amp;#39;)) 完整代</description>
+    </item>
+    
     <item>
       <title>在windows下，vscode 1.60.0版本修改默认终端为git bash</title>
       <link>https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html</link>
@@ -22,7 +31,7 @@
       <pubDate>Fri, 27 Aug 2021 11:26:47 +0800</pubDate>
       
       <guid>https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</guid>
-      <description>博客构建之路 一、安装Hugo 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 配置环境变量 二、生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/zhishouH路径： $ hugo new site /e/Desktop/zhishouH 这样就在e/Desdktop/site</description>
+      <description>博客构建之路 一、安装Hugo 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 配置环境变量 二、生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/zhishouH路径： $ hugo new site /e/Desktop/zhishouH 这样就在e/Desdktop/zhis</description>
     </item>
     
   </channel>
