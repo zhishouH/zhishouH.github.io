@@ -1,5 +1,5 @@
 baseURL = "https://www.huangzhishou.com/" 
-googleAnalytics = "G-XHTRYTT5N1" # UA-XXXXXXXX-X
+googleAnalytics = "" # UA-XXXXXXXX-X
 languageCode = "zh-CN" 
 publishDir = "docs" 
 theme = "maupassant" 
