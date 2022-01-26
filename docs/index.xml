@@ -22,7 +22,7 @@
       <pubDate>Fri, 27 Aug 2021 11:26:47 +0800</pubDate>
       
       <guid>https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</guid>
-      <description>Hugo构建个人博客 安装Hugo 二进制安装(简单、快速) 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/site路径： $ hugo new site /e/Desktop/site 这样就在e/Desdktop/si</description>
+      <description>Hugo构建个人博客 安装Hugo 二进制安装(简单、快速) 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/site路径： $ hugo new site /e/Desktop/zhishouH 这样就在e/Desdktop/si</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Fri, 27 Aug 2021 11:20:28 +0800</pubDate>
       
       <guid>https://www.huangzhishou.com/about.html</guid>
-      <description>👋你好呀 我的名字叫黄智守 爱好JavaScript 🌱最近正在学习 《JavaScript高级程序设计(第4版)》 《Vue.js开发实战》 📫 如何联系我 微信：LaO_Huang_Z19 邮箱：zhishouhuang@gmail.com</description>
+      <description>关于我 练习时长两年半的前端实习生🙎‍♂️</description>
     </item>
     
     <item>
