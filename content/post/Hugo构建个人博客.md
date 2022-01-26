@@ -25,7 +25,7 @@ tags: [博客]
 
 `$ hugo new site /e/Desktop/zhishouH`
 
-这样就在**e/Desdktop/site**目录里生成了初始站点，进去目录：
+这样就在**e/Desdktop/zhishouH**目录里生成了初始站点，进去目录：
 
 `cd /e/Desktop/zhishouH`
 
@@ -48,7 +48,7 @@ tags: [博客]
 
 `$ hugo new post/关于hugo.md`
 
-**index.md**生成到了**content/post/关于hugo.md**	
+**关于hugo.md**生成到了**content/post/关于hugo.md**	
 
 
 
