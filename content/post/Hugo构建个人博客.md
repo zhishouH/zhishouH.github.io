@@ -2,6 +2,8 @@
 title: "Hugo构建个人博客"
 date: 2021-08-27T11:26:47+08:00
 draft: false
+tags: [博客]
+categories: [博客]
 ---
 
 > Hugo构建个人博客
