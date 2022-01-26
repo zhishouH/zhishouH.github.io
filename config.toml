@@ -18,22 +18,16 @@ summaryLength = 140
 # disqusShortname = "yourdiscussshortname" ## 是否开启disqus评论，不要和utteranc同时开启
 
 [author]
-	name = "黄智守"
+name = "黄智守"
 
 [params]
-	author = "黄智守" 
-	busuanzi = true #启用不算子网页统计
-	description = "" 
-	googleAd = "" #ca-pub-xxxxxxxxxxxxxx
-	keywords = "JavaScript、Vue、HTML、CSS、黄智守" 
-	localSearch = true # 启用本地搜索
-	subtitle = "专注于JavaScript、Vue、HTML、CSS" 
-
-# 这里我存放在了主题的static文件夹里，根目录的似乎也可以
-# customCSS = ['douban.css', 'other.css']
-# if ['custom.css'], load '/static/css/custom.css' file
-# customJS = ['douban.js']
-# if ['custom.js'], load '/static/js/custom.js' file
+author = "黄智守" 
+busuanzi = true #启用不算子网页统计
+description = "" 
+googleAd = "" #ca-pub-xxxxxxxxxxxxxx
+keywords = "JavaScript、Vue、HTML、CSS、黄智守" 
+localSearch = true # 启用本地搜索
+subtitle = "专注于JavaScript、Vue、HTML、CSS" 
 
 # 全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能
 fancybox = true 
@@ -42,46 +36,46 @@ toc = false # 是否开启目录
 ## 友情链接，可以多个
 
 [[params.links]]
-	name = "黄伟亮的博客"
-	title = "黄伟亮的博客"
-	url = "https://huangweiliang.com/"
+name = "黄伟亮的博客"
+title = "黄伟亮的博客"
+url = "https://huangweiliang.com/"
 
 [[params.links]]
-	name = "Duckweeds7"
-	title = "Duckweeds7"
-	url = "https://www.duckweeds7.com/"
+name = "Duckweeds7"
+title = "Duckweeds7"
+url = "https://www.duckweeds7.com/"
 
 ## 配置 utteranc评论,教程参考 https://utteranc.es/
 [params.utteranc]
-	enable = true 
-	issueTerm = "pathname" 
-	repo = "zhishouH/zhishouH.github.io" ##换成自己的
-	theme = "github-light" 
+enable = true 
+issueTerm = "pathname" 
+repo = "zhishouH/zhishouH.github.io" ##换成自己的
+theme = "github-light" 
 
 ## 开启版权声明，协议名字和链接都可以换
 [params.cc]
-	link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
-	name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
+link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
 
 ## 配置代码高亮
 [markup]
 
 [markup.highlight]
-	lineNos = true
-	style = "github"
+lineNos = true
+style = "github"
 
 ## 配置网站菜单
 
 [menu]
 
 [[menu.main]]
-	identifier = "archives"
-	name = "归档"
-	url = "/archives.html"
-	weight = 2
+identifier = "archives"
+name = "归档"
+url = "/archives.html"
+weight = 2
 
 [[menu.main]]
-	identifier = "about"
-	name = "关于"
-	url = "/about.html"
-	weight = 3
+identifier = "about"
+name = "关于"
+url = "/about.html"
+weight = 3
