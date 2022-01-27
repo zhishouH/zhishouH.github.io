@@ -1,6 +1,6 @@
 ---
 title: "Learn React 02"
-date: 2022-01-27T10:17:42+08:00
+date: 2022-01-27T11:13:23+08:00
 draft: false
 tags: [React]
 categories: [React]
@@ -134,7 +134,7 @@ ReactDOM.render(<A />, document.getElementById('app'))
 
 示例代码：[生命周期函数(旧)](https://github.com/zhishouH/learn-react/blob/main/react-basic/10-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/2-react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F(%E6%97%A7).html)
 
-<img src="Learn React 02.assets/1-1643252379199.png" alt="1" style="zoom:80%;" />
+![生命周期旧](Learn-React-02.assets/生命周期旧.png)
 
 - 初始化阶段：由ReactDOM.render( )触发--->初次渲染  
 

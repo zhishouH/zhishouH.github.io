@@ -1,6 +1,6 @@
 ---
 title: "Learn React 01"
-date: 2022-01-26T13:34:02+08:00
+date: 2022-01-27T11:11:30+08:00
 draft: false
 tags: [React]
 categories: [React]
@@ -74,7 +74,7 @@ ReactDOM.render(VDOM, document.getElementById('app'))
 
 - 1、定义虚拟dom时，不要写引号
 
--  2、标签中混入js表达式要用{}
+- 2、标签中混入js表达式要用{}
 
 - 3、样式中的类名不要用class,要用className
 
