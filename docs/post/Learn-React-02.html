@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>Learn React 02 | 黄智守的博客</title>
+    <meta property="og:title" content="Learn React 02 - 黄智守的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2022-01-27T10:17:42&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2022-01-27T10:17:42&#43;08:00'>
+        
+    <meta name="Keywords" content="JavaScript、Vue、HTML、CSS、黄智守">
+    <meta name="description" content="Learn React 02">
+        
+    <meta name="author" content="黄智守">
+    <meta property="og:url" content="https://www.huangzhishou.com/post/Learn-React-02.html">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.huangzhishou.com/">
+                        黄智守的博客
+                    </a>
+                
+                <p class="description">专注于JavaScript、Vue、HTML、CSS</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.huangzhishou.com/">首页</a>
+                    
+                    <a  href="https://www.huangzhishou.com/archives.html" title="归档">归档</a>
+                    
+                    <a  href="https://www.huangzhishou.com/about.html" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Learn React 02</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年1月27日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/React'>React</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <blockquote>
+<p>React 生命周期函数</p>
+</blockquote>
+<h4 id="1生命周期函数旧">1、生命周期函数(旧)</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#000;font-weight:bold">class</span> Count <span style="color:#000;font-weight:bold">extends</span> React.Component {
+  <span style="color:#998;font-style:italic">// 构造器
+</span><span style="color:#998;font-style:italic"></span>  constructor(props) {
+    console.log(<span style="color:#d14">&#34;Count--constructor&#34;</span>);
+    <span style="color:#000;font-weight:bold">super</span>(props)
+    <span style="color:#998;font-style:italic">// 初始化状态
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>.state <span style="color:#000;font-weight:bold">=</span> { count<span style="color:#000;font-weight:bold">:</span> <span style="color:#099">0</span> }
+  }
+
+  <span style="color:#998;font-style:italic">// +1按钮的回调 
+</span><span style="color:#998;font-style:italic"></span>  add <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+    <span style="color:#998;font-style:italic">// 获取原状态
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">const</span> { count } <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>.state
+    <span style="color:#998;font-style:italic">// 更新状态
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>.setState({ count<span style="color:#000;font-weight:bold">:</span> count <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span> })
+  }
+
+  <span style="color:#998;font-style:italic">// 卸载组件按钮的回调
+</span><span style="color:#998;font-style:italic"></span>  death <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+    ReactDOM.unmountComponentAtNode(<span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+  }
+
+  <span style="color:#998;font-style:italic">// 强制更新按钮的回调
+</span><span style="color:#998;font-style:italic"></span>  force <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+    <span style="color:#000;font-weight:bold">this</span>.forceUpdate()
+  }
+  
+  <span style="color:#998;font-style:italic">// 组件将要挂载的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentWillMount() {
+    console.log(<span style="color:#d14">&#34;Count--componentWillMount&#34;</span>);
+  }
+
+  <span style="color:#998;font-style:italic">// 组件挂载完毕的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentDidMount() {
+    console.log(<span style="color:#d14">&#34;Count--componentDidMount&#34;</span>);
+  }
+
+  <span style="color:#998;font-style:italic">// 组件将要卸载的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentWillUnmount() {
+    console.log(<span style="color:#d14">&#34;Count--componentWillUnmount&#34;</span>);
+  }
+
+  <span style="color:#998;font-style:italic">// 控制组件更新的阀门 
+</span><span style="color:#998;font-style:italic"></span>  shouldComponentUpdate() {
+    console.log(<span style="color:#d14">&#34;Count--shouldComponentUpdate&#34;</span>);
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">true</span>
+  }
+
+  <span style="color:#998;font-style:italic">// 组件将要更新的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentWillUpdate() {
+    console.log(<span style="color:#d14">&#34;Count--componentWillUpdate&#34;</span>);
+  }
+
+  <span style="color:#998;font-style:italic">// 组件更新完的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentDidUpdate() {
+    console.log(<span style="color:#d14">&#34;Count--componentDidUpdate&#34;</span>);
+  }
+
+  render() {
+    console.log(<span style="color:#d14">&#34;Count--render&#34;</span>);
+    <span style="color:#000;font-weight:bold">const</span> { count } <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>.state
+    <span style="color:#000;font-weight:bold">return</span> (
+      &lt;<span style="color:#000080">div</span>&gt;
+        &lt;<span style="color:#000080">h2</span>&gt;当前求和为<span style="color:#a61717;background-color:#e3d2d2">：</span>{count}&lt;/<span style="color:#000080">h2</span>&gt;
+		&lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.add}&gt;<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>&lt;/<span style="color:#000080">button</span>&gt;
+		&lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.death}&gt;卸载组件&lt;/<span style="color:#000080">button</span>&gt;
+		&lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.force}&gt;强制更新&lt;/<span style="color:#000080">button</span>&gt;
+	  &lt;/<span style="color:#000080">div</span>&gt;
+    )
+  }
+}
+
+<span style="color:#998;font-style:italic">// 父组件A
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">class</span> A <span style="color:#000;font-weight:bold">extends</span> React.Component {
+  state <span style="color:#000;font-weight:bold">=</span> { carName<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;奔驰&#39;</span> }
+
+  changeCar <span style="color:#000;font-weight:bold">=</span> () =&gt; {
+    <span style="color:#000;font-weight:bold">this</span>.setState({ carName<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;本田&#39;</span> })
+  }
+  
+  render() {
+    <span style="color:#000;font-weight:bold">return</span> (
+	  &lt;<span style="color:#000080">div</span>&gt;
+		&lt;<span style="color:#000080">div</span>&gt;我是A组件&lt;/<span style="color:#000080">div</span>&gt;
+		&lt;<span style="color:#000080">button</span> <span style="color:#008080">onClick</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.changeCar}&gt;换车&lt;/<span style="color:#000080">button</span>&gt;
+		&lt;<span style="color:#000080">B</span> <span style="color:#008080">carName</span><span style="color:#000;font-weight:bold">=</span>{<span style="color:#000;font-weight:bold">this</span>.state.carName} /&gt;
+	  &lt;/<span style="color:#000080">div</span>&gt;
+	)
+  }
+}
+
+<span style="color:#998;font-style:italic">// 子组件B
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">class</span> B <span style="color:#000;font-weight:bold">extends</span> React.Component {
+  <span style="color:#998;font-style:italic">// 组件就要接受新的props的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentWillReceiveProps(props) {
+    console.log(<span style="color:#d14">&#34;B--componentWillReceiveProps&#34;</span>, props);
+  }
+  <span style="color:#998;font-style:italic">// 控制组件更新的阀门
+</span><span style="color:#998;font-style:italic"></span>  shouldComponentUpdate() {
+	console.log(<span style="color:#d14">&#34;B--shouldComponentUpdate&#34;</span>);
+	<span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">true</span>
+  }
+  <span style="color:#998;font-style:italic">// 组件将要更新的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentWillUpdate() {
+	console.log(<span style="color:#d14">&#34;B--componentWillUpdate&#34;</span>);
+  }
+  <span style="color:#998;font-style:italic">// 组件更新完毕的钩子
+</span><span style="color:#998;font-style:italic"></span>  componentDidUpdate() {
+	console.log(<span style="color:#d14">&#34;B--componentDidUpdate&#34;</span>);
+  }
+  render() {
+	<span style="color:#000;font-weight:bold">return</span> (
+	  &lt;<span style="color:#000080">div</span>&gt;我是B组件,接收到的车是<span style="color:#000;font-weight:bold">:</span>{<span style="color:#000;font-weight:bold">this</span>.props.carName}&lt;/<span style="color:#000080">div</span>&gt;
+	)
+  }
+}
+
+<span style="color:#998;font-style:italic">// ReactDOM.render(&lt;Count /&gt;, document.getElementById(&#39;app&#39;))
+</span><span style="color:#998;font-style:italic"></span>ReactDOM.render(&lt;<span style="color:#000080">A</span> /&gt;, <span style="color:#0086b3">document</span>.getElementById(<span style="color:#d14">&#39;app&#39;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>示例代码：<a href="https://github.com/zhishouH/learn-react/blob/main/react-basic/10-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/2-react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F(%E6%97%A7).html">生命周期函数(旧)</a></p>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>初始化阶段：由ReactDOM.render( )触发&mdash;&gt;初次渲染</p>
+<ul>
+<li>
+<p>constructor( )</p>
+</li>
+<li>
+<p>componentWillMount( )</p>
+</li>
+<li>
+<p>render( )</p>
+</li>
+<li>
+<p>componentDidMount( )    ====&gt;    常用</p>
+<p>一般在这个钩子中做初始化的操作，例如：开启定时器、发送网络请求、订阅消息</p>
+</li>
+</ul>
+</li>
+<li>
+<p>更新阶段:由组件内部this.setState( )或父组件render触发</p>
+<ul>
+<li>
+<p>shouldComponentUpdate( )</p>
+</li>
+<li>
+<p>componentWillUpdate( )</p>
+</li>
+<li>
+<p>render( )    ====&gt;    必须使用的钩子</p>
+</li>
+<li>
+<p>componentDidUpdate( )</p>
+</li>
+</ul>
+</li>
+<li>
+<p>卸载组件：由ReactDOM.unmountComponentAtNode( )触发</p>
+<ul>
+<li>
+<p>componentWillUnmount( )    ====&gt;    组件将要卸载的钩子(常用)</p>
+<p>一般在这个钩子中做收尾的操作，例如：关闭定时器，取消订阅消息</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2生命周期函数新">2、生命周期函数(新)</h4>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.huangzhishou.com/">黄智守</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.huangzhishou.com/post/Learn-React-02.html">https://www.huangzhishou.com/post/Learn-React-02.html</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/Learn-React-01.html">Learn React 01</a></li>
+        
+        <li><a href="/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html">在windows下，vscode 1.60.0版本修改默认终端为git bash</a></li>
+        
+        <li><a href="/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">Hugo构建个人博客</a></li>
+        
+        <li><a href="/about.html">关于我</a></li>
+        
+        <li><a href="/archives.html">归档</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/React'>React</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "zhishouH/zhishouH.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2022 <a href="https://www.huangzhishou.com/">黄智守的博客 </a>
+        
+    </div>
+    <br />
+    <div>
+        本站仅为本人的学习笔记，部分内容来自网络，如果侵权请联系删除，谢谢大家！
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [['$', '$']],
+            processEscapes: true
+        }
+    };
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search"
+      action='https://www.huangzhishou.com/search.html'
+      method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.huangzhishou.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/Learn-React-02.html" title="Learn React 02">Learn React 02</a>
+    </li>
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/Learn-React-01.html" title="Learn React 01">Learn React 01</a>
+    </li>
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html" title="在windows下，vscode 1.60.0版本修改默认终端为git bash">在windows下，vscode 1.60.0版本修改默认终端为git bash</a>
+    </li>
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="Hugo构建个人博客">Hugo构建个人博客</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.huangzhishou.com/categories/React.html">React (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://www.huangzhishou.com/tags/React.html">React</a>
+    
+    <a href="https://www.huangzhishou.com/tags/%E5%8D%9A%E5%AE%A2.html">博客</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://huangweiliang.com/" title="黄伟亮的博客">黄伟亮的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://www.duckweeds7.com/" title="Duckweeds7">Duckweeds7</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.huangzhishou.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ const VDOM = <h1>HelloWorld<h1/>
 ReactDOM.render(VDOM,document.getElementById('app'))
 ```
 
-完整代码：[HelloWorld](https://github.com/zhishouH/learn-react/blob/main/react-basic/01-hello-world/index.html)
+示例代码：[HelloWorld](https://github.com/zhishouH/learn-react/blob/main/react-basic/01-hello-world/index.html)
 
 #### 2、虚拟DOM的两种创建方式
 
@@ -34,7 +34,7 @@ ReactDOM.render(VDOM,document.getElementById('app'))
   ReactDOM.render(VDOM, document.getElementById('app'))
   ```
 
-  完整代码：[使用jsx创建虚拟DOM](https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/1-%E4%BD%BF%E7%94%A8jsx%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9FDOM.html)
+  示例代码：[使用jsx创建虚拟DOM](https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/1-%E4%BD%BF%E7%94%A8jsx%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9FDOM.html)
 
 - 使用js创建虚拟DOM
 
@@ -45,7 +45,7 @@ ReactDOM.render(VDOM,document.getElementById('app'))
   ReactDOM.render(VDOM, document.getElementById('app'))
   ```
 
-  完整代码：[使用js创建虚拟DOM](https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/2-%E4%BD%BF%E7%94%A8js%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9FDOM.html)
+  示例代码：[使用js创建虚拟DOM](https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/2-%E4%BD%BF%E7%94%A8js%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9FDOM.html)
 
 - 虚拟DOM和真实DOM：
 
@@ -55,7 +55,7 @@ ReactDOM.render(VDOM,document.getElementById('app'))
 
   虚拟DOM最终会被React转化为真实DOM，呈现在页面上
 
-  完整代码：[虚拟DOM和真实DOM](https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/3-%E8%99%9A%E6%8B%9FDOM%E5%92%8C%E7%9C%9F%E5%AE%9EDOM.html)
+  示例代码：[虚拟DOM和真实DOM](https://github.com/zhishouH/learn-react/blob/main/react-basic/02-%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F/3-%E8%99%9A%E6%8B%9FDOM%E5%92%8C%E7%9C%9F%E5%AE%9EDOM.html)
 
 #### 3、jsx语法规则
 
@@ -90,7 +90,7 @@ ReactDOM.render(VDOM, document.getElementById('app'))
 
   ​		大写字母开头，react渲染对应的组件，若组件未定义则报错
 
-完整代码：[jsx语法规则](https://github.com/zhishouH/learn-react/blob/main/react-basic/03-jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/index.html)
+示例代码：[jsx语法规则](https://github.com/zhishouH/learn-react/blob/main/react-basic/03-jsx%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/index.html)
 
 #### 4、组件定义
 
@@ -107,7 +107,7 @@ ReactDOM.render(VDOM, document.getElementById('app'))
   ReactDOM.render(<MyComponent />, document.getElementById('app'))
   ```
 
-  完整代码：[函数式组件](https://github.com/zhishouH/learn-react/blob/main/react-basic/05-react%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/1-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6.html)
+  示例代码：[函数式组件](https://github.com/zhishouH/learn-react/blob/main/react-basic/05-react%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/1-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6.html)
 
 - 类式组件
 
@@ -126,7 +126,7 @@ ReactDOM.render(VDOM, document.getElementById('app'))
   
   ```
 
-  完整代码：[类式组件](https://github.com/zhishouH/learn-react/blob/main/react-basic/05-react%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/2-%E7%B1%BB%E5%BC%8F%E7%BB%84%E4%BB%B6.html)
+  示例代码：[类式组件](https://github.com/zhishouH/learn-react/blob/main/react-basic/05-react%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/2-%E7%B1%BB%E5%BC%8F%E7%BB%84%E4%BB%B6.html)
 
 #### 5、组件实例属性——state
 
@@ -148,7 +148,7 @@ class MyComponent extends React.Component {
 ReactDOM.render(<MyComponent />, document.getElementById('app'))
 ```
 
-完整代码：[组件实例属性——state](https://github.com/zhishouH/learn-react/tree/main/react-basic/06-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-state)
+示例代码：[组件实例属性——state](https://github.com/zhishouH/learn-react/tree/main/react-basic/06-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-state)
 
 #### 6、组件实例属性——props
 
@@ -183,7 +183,7 @@ const p = { name: "zhishouH" }
 ReactDOM.render(<Person {...p} />, document.getElementById('app'))
 ```
 
-完整代码：[组件实例属性——props](https://github.com/zhishouH/learn-react/tree/main/react-basic/07-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-props)
+示例代码：[组件实例属性——props](https://github.com/zhishouH/learn-react/tree/main/react-basic/07-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-props)
 
 #### 7、组件实例属性——refs
 
@@ -220,7 +220,7 @@ class Demo extends React.Component {
 ReactDOM.render(<Demo />, document.getElementById('app'))
 ```
 
-完整代码：[组件实例属性——refs](https://github.com/zhishouH/learn-react/tree/main/react-basic/08-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E7%9A%84%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-refs)
+示例代码：[组件实例属性——refs](https://github.com/zhishouH/learn-react/tree/main/react-basic/08-%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E7%9A%84%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7-refs)
 
 #### 8、事件处理
 
@@ -243,4 +243,4 @@ ReactDOM.render(<Demo />, document.getElementById('app'))
 - React 事件的命名采用小驼峰式（camelCase），而不是纯小写。
 - 使用 JSX 语法时你需要传入一个函数作为事件处理函数，而不是一个字符串。
 
-完整代码：[事件处理](https://github.com/zhishouH/learn-react/blob/main/react-basic/09-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/index.html)
+示例代码：[事件处理](https://github.com/zhishouH/learn-react/blob/main/react-basic/09-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/index.html)
