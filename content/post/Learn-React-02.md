@@ -134,7 +134,7 @@ ReactDOM.render(<A />, document.getElementById('app'))
 
 示例代码：[生命周期函数(旧)](https://github.com/zhishouH/learn-react/blob/main/react-basic/10-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/2-react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F(%E6%97%A7).html)
 
-<img src="Learn-React-02.assets/生命周期旧.png" alt="生命周期旧" style="zoom:80%;" />
+![生命周期旧](Learn-React-02.assets/生命周期旧.png)
 
 - 初始化阶段：由ReactDOM.render( )触发--->初次渲染  
 
@@ -244,7 +244,7 @@ ReactDOM.render(<Count count={199} />, document.getElementById('app'))
 
 示例代码：[生命周期函数(新)](https://github.com/zhishouH/learn-react/blob/main/react-basic/10-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/3-react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F(%E6%96%B0).html)
 
-<img src="Learn-React-02.assets/生命周期新.png" alt="生命周期新" style="zoom:80%;" />
+![生命周期新](Learn-React-02.assets/生命周期新.png)
 
 - 初始化阶段：由ReactDOM.render( )触发--->初次渲染  
 
