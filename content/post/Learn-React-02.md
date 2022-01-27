@@ -74,7 +74,7 @@ class Count extends React.Component {
     const { count } = this.state
     return (
       <div>
-        <h2>当前求和为：{count}</h2>
+        <h2>当前求和为:{count}</h2>
 		<button onClick={this.add}>+1</button>
 		<button onClick={this.death}>卸载组件</button>
 		<button onClick={this.force}>强制更新</button>
@@ -134,7 +134,7 @@ ReactDOM.render(<A />, document.getElementById('app'))
 
 示例代码：[生命周期函数(旧)](https://github.com/zhishouH/learn-react/blob/main/react-basic/10-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/2-react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F(%E6%97%A7).html)
 
-![生命周期旧](Learn-React-02.assets/生命周期旧.png)
+<img src="Learn-React-02.assets/生命周期旧.png" alt="生命周期旧" style="zoom:80%;" />
 
 - 初始化阶段：由ReactDOM.render( )触发--->初次渲染  
 
@@ -163,3 +163,112 @@ ReactDOM.render(<A />, document.getElementById('app'))
     一般在这个钩子中做收尾的操作，例如：关闭定时器，取消订阅消息
 
 #### 2、生命周期函数(新)
+
+```jsx
+class Count extends React.Component {
+  // 构造器
+  constructor(props) {
+    console.log("Count--constructor");
+    super(props)
+    // 初始化状态
+    this.state = { count: 0 }
+  }
+
+  // +1按钮的回调 
+  add = () => {
+    // 获取原状态
+    const { count } = this.state
+    // 更新状态
+    this.setState({ count: count + 1 })
+  }
+
+  // 卸载组件按钮的回调
+  death = () => {
+    ReactDOM.unmountComponentAtNode(document.getElementById('app'))
+  }
+
+  // 强制更新按钮的回调
+  force = () => {
+    this.forceUpdate()
+  }
+
+  // 若state的值在任何时候都取决与props，那么可以使用
+  static getDerivedStateFromProps(props, state) {
+    console.log('Count--getDerivedStateFromProps', props, state);
+    // return props
+    return null
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log('Count--getSnapshotBeforeUpdate');
+    return 'zhishouh'
+  }
+
+  // 组件挂载完毕的钩子
+  componentDidMount() {
+    console.log("Count--componentDidMount");
+  }
+
+  // 组件将要卸载的钩子 
+  componentWillUnmount() {
+    console.log("Count--componentWillUnmount");
+  }
+
+  // 控制组件更新的阀门 
+  shouldComponentUpdate() {
+    console.log("Count--shouldComponentUpdate");
+    return true
+  }
+
+  // 组件更新完的钩子
+  componentDidUpdate(preProps, preState) {
+    console.log("Count--componentDidUpdate", preProps, preState);
+  }
+
+  render() {
+    console.log("Count--render");
+    const { count } = this.state
+    return (
+      <div>
+          <h2>当前求和为:{count}</h2>
+          <button onClick={this.add}>+1</button>
+          <button onClick={this.death}>卸载组件</button>
+          <button onClick={this.force}>强制更新</button>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<Count count={199} />, document.getElementById('app'))
+```
+
+示例代码：[生命周期函数(新)](https://github.com/zhishouH/learn-react/blob/main/react-basic/10-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/3-react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F(%E6%96%B0).html)
+
+<img src="Learn-React-02.assets/生命周期新.png" alt="生命周期新" style="zoom:80%;" />
+
+- 初始化阶段：由ReactDOM.render( )触发--->初次渲染  
+
+  - constructor( ) 
+
+  - **getDerivedStateFromProps** ( ) 
+
+  - render( )
+
+  - componentDidMount( )    ====>    常用
+
+    一般在这个钩子中做初始化的操作，例如：开启定时器、发送网络请求、订阅消息  
+
+- 更新阶段:由组件内部this.setState( )或父组件render触发
+
+  - **getDerivedStateFromProps**( ) 
+
+  - shouldComponentUpdate( ) 
+  - render( )    ====>    必须使用的钩子
+  - **getSnapshotBeforeUpdate**
+  - componentDidUpdate( ) 
+
+- 卸载组件：由ReactDOM.unmountComponentAtNode( )触发
+
+  - componentWillUnmount( )    ====>    组件将要卸载的钩子(常用)
+
+    一般在这个钩子中做收尾的操作，例如：关闭定时器，取消订阅消息
