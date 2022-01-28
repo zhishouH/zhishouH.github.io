@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 27 Jan 2022 11:13:23 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jan 2022 11:07:23 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn React 03</title>
+      <link>https://www.huangzhishou.com/post/Learn-React-03.html</link>
+      <pubDate>Fri, 28 Jan 2022 11:07:23 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/Learn-React-03.html</guid>
+      <description>React key的作用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // 使用index索引值作为key // 初始数据： {id:1,name:&amp;#39;小张&amp;#39;,age:18}, {id:2,name:&amp;#39;小李&amp;#39;,age:19} // 初始的虚拟DOM： &amp;lt;li key=0&amp;gt;小张---18&amp;lt</description>
+    </item>
+    
     <item>
       <title>Learn React 02</title>
       <link>https://www.huangzhishou.com/post/Learn-React-02.html</link>
