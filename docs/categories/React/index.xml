@@ -6,7 +6,16 @@
     <description>Recent content in React on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 08 Feb 2022 11:42:31 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/React/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Feb 2022 17:48:02 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/React/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn React 06</title>
+      <link>https://www.huangzhishou.com/post/Learn-React-06.html</link>
+      <pubDate>Tue, 08 Feb 2022 17:48:02 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/Learn-React-06.html</guid>
+      <description>react 脚手架配置代理 方法一 在 package.json 中追加如下配置 &amp;quot;proxy&amp;quot;:&amp;quot;http://localhost:5000&amp;quot; 说明： 优点：配置简单，前端请求资源时可以不加任何前缀。 缺点：不能配置多个代理。 工作方式：上述方式配置代理，当请求了3000不存在的资源时，那么该请求会转发给5000 （优先匹配前端资源） 方法二 第一步：创建代理配置文件 1 在src下创建配置文件</description>
+    </item>
+    
     <item>
       <title>Learn React 05</title>
       <link>https://www.huangzhishou.com/post/Learn-React-05.html</link>
