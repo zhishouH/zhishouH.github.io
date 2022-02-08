@@ -6,7 +6,16 @@
     <description>Recent content in React on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Jan 2022 09:36:59 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/React/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Feb 2022 11:42:31 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/React/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn React 05</title>
+      <link>https://www.huangzhishou.com/post/Learn-React-05.html</link>
+      <pubDate>Tue, 08 Feb 2022 11:42:31 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/Learn-React-05.html</guid>
+      <description>用 create-react-app 编写 todo-list 示例效果 项目结构 1 2 3 4 5 6 7 8 |- src |- components |- Header |- List |- Item |- Footer |- App.jsx |- index.js 示例代码 总结： 1、拆分组件、实现静态组件，注意className、style的写法 2、动态初始化列表，如何确定将数据放在哪个组件的state中 1）某个组件使用，放在其自身的sate中 2）某些组件使用，放在它</description>
+    </item>
+    
     <item>
       <title>Learn React 04</title>
       <link>https://www.huangzhishou.com/post/Learn-React-04.html</link>
