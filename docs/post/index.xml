@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 08 Feb 2022 17:48:02 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Feb 2022 10:15:45 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn React 07</title>
+      <link>https://www.huangzhishou.com/post/Learn-React-07.html</link>
+      <pubDate>Thu, 10 Feb 2022 10:15:45 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/Learn-React-07.html</guid>
+      <description>消息订阅-发布机制 React中兄弟组件或深层次组件之间的通信 工具库：PubSubJS 下载：npm i pubsub-js &amp;ndash;save 使用： import PubSub from &amp;lsquo;pubsub-js&amp;rsquo; //引入 PubSub.subscribe(&amp;lsquo;delete&amp;rsquo;, function(data){ }); //订阅消息 PubSub.publish(&amp;lsquo;delete&amp;rsquo;, data) //发布消息 List组件订阅消息 1 2 3 4 5 6 7 8 componentDidMount(){ this.token = PubSub.subscribe(&amp;#39;searchData&amp;#39;,(_,stateObj)=&amp;gt;{ this.setState(stateObj) }) } componentWillUnmount(){ PubSub.unsubscribe(this.token) } Search组件发布消息 1 PubSub.publish(&amp;#39;searchData&amp;#39;,{isLoading:false,users:response.data.items})</description>
+    </item>
+    
     <item>
       <title>Learn React 06</title>
       <link>https://www.huangzhishou.com/post/Learn-React-06.html</link>

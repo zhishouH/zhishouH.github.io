@@ -14,7 +14,7 @@
     <meta property="og:type" content="article">
         
         
-    <meta name="Keywords" content="JavaScript、Vue、HTML、CSS、黄智守">
+    <meta name="Keywords" content="JavaScript、Vue、React、HTML、CSS、黄智守">
     <meta name="description" content="React">
         
     <meta name="author" content="黄智守">
@@ -47,7 +47,7 @@
                         黄智守的博客
                     </a>
                 
-                <p class="description">专注于JavaScript、Vue、HTML、CSS</p>
+                <p class="description">专注于JavaScript、Vue、React、HTML、CSS</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
@@ -78,6 +78,29 @@
     </h3>
     
 
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://www.huangzhishou.com/post/Learn-React-07.html">Learn React 07</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年2月10日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='/categories/React'>React</a>
+            
+        </div>
+        
+        <div class="post-content">
+            消息订阅-发布机制 React中兄弟组件或深层次组件之间的通信 工具库：PubSubJS 下载：npm i pubsub-js &ndash;save 使用： import PubSub from &lsquo;pubsub-js&rsquo; //引入 PubSub.subscribe(&lsquo;delete&rsquo;, function(data){ }); //订阅消息 PubSub.publish(&lsquo;delete&rsquo;, data) //发布消息 List组件订阅消息 1 2 3 4 5 6 7 8 componentDidMount(){ this.token = PubSub.subscribe(&#39;searchData&#39;,(_,stateObj)=&gt;{ this.setState(stateObj) }) } componentWillUnmount(){ PubSub.unsubscribe(this.token) } Search组件发布消息 1 PubSub.publish(&#39;searchData&#39;,{isLoading:false,users:response.data.items})……
+            <p class="readmore"><a href="https://www.huangzhishou.com/post/Learn-React-07.html">阅读全文</a></p>
+        </div>
+    </article>
     
     <article class="post">
         <header>
@@ -268,6 +291,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.huangzhishou.com/post/Learn-React-07.html" title="Learn React 07">Learn React 07</a>
+    </li>
+    
+    <li>
         <a href="https://www.huangzhishou.com/post/Learn-React-06.html" title="Learn React 06">Learn React 06</a>
     </li>
     
@@ -308,7 +335,7 @@
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
     
-    <li><a href="https://www.huangzhishou.com/categories/React.html">React (6)</a></li>
+    <li><a href="https://www.huangzhishou.com/categories/React.html">React (7)</a></li>
     
 </ul>
     </section>
