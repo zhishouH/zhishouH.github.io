@@ -9,24 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Learn React 04 | 黄智守的博客</title>
-    <meta property="og:title" content="Learn React 04 - 黄智守的博客">
+    <title>Posts | 黄智守的博客</title>
+    <meta property="og:title" content="Posts - 黄智守的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-01-29T09:36:59&#43;08:00'>
-        
-        
-    <meta property="article:modified_time" content='2022-01-29T09:36:59&#43;08:00'>
         
     <meta name="Keywords" content="JavaScript、Vue、React、HTML、CSS、黄智守">
-    <meta name="description" content="Learn React 04">
+    <meta name="description" content="Posts">
         
     <meta name="author" content="黄智守">
-    <meta property="og:url" content="https://www.huangzhishou.com/post/Learn-React-04.html">
+    <meta property="og:url" content="https://www.huangzhishou.com/post.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml" href="https://www.huangzhishou.com/post/index.xml" title="黄智守的博客" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -74,174 +71,68 @@
                     
 <div class="res-cons">
     
+    
     <article class="post">
         <header>
-            <h1 class="post-title">Learn React 04</h1>
+            <h1 class="post-title">
+                <a href="https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html" title="在windows下，vscode 1.60.0版本修改默认终端为git bash">在windows下，vscode 1.60.0版本修改默认终端为git bash</a>
+            </h1>
         </header>
         <date class="post-meta meta-date">
-            2022年1月29日
+            2021年9月17日
         </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/React'>React</a></span>
-            
-        </div>
-        
-        
-        <div class="post-meta">
-            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                    阅读</span></span>
-        </div>
-        
-        
         <div class="post-content">
-            <blockquote>
-<p>React 使用  create-react-app  创建  react  应用</p>
-</blockquote>
-<h4 id="1关于--react--脚手架">1、关于  react  脚手架</h4>
-<ul>
-<li>
-<p>react  脚手架是用于帮助程序员快速创建一个基于  react  库的模板项目</p>
-<ul>
-<li>
-<p>包含了所有需要的配置(语法检查、jsx编译、devServer)</p>
-</li>
-<li>
-<p>下载好了所有相关的依赖</p>
-</li>
-<li>
-<p>可以直接运行一个简单效果</p>
-</li>
-</ul>
-</li>
-<li>
-<p>react  提供了一个用于创建  react  项目的脚手架库  <code>create-react-app</code></p>
-</li>
-<li>
-<p>项目的整体技术架构为：react  +  webpack  +  es6  + eslint</p>
-</li>
-<li>
-<p>使用脚手架开发的项目的特点：模块化、组件化、工程化</p>
-</li>
-</ul>
-<h4 id="2创建项目并启动">2、创建项目并启动</h4>
-<ul>
-<li>
-<p>第一步：全局安装  <code>npm i -g create-react-app</code></p>
-</li>
-<li>
-<p>第二步：创建项目  <code>create-react-app part1</code></p>
-</li>
-<li>
-<p>第三步：加入项目文件夹  <code>cd part1</code></p>
-</li>
-<li>
-<p>第四步：启动项目：<code>npm start</code></p>
-</li>
-</ul>
-<h4 id="3react-脚手架项目结构">3、react 脚手架项目结构</h4>
-<pre tabindex="0"><code>|- public  静态资源文件夹
-  |- favicon.icon  网站页签图标  
-  |- index.html    主页面
-  |- logo192.png   logo图
-  |- logo512.png   logo图
-  |- mainfest.json 应用加壳的配置文件
-  |- robots.txt    爬虫协议文件
-|- src  源码文件夹
-  |- App.css      App组件的样式
-  |- App.js		  App组件
-  |- App.test.js  用于给App做测试
-  |- index.css	  样式
-  |- index.js	  入口文件
-  |- logo.svg  	  logo图
-  |- reportWebVitals.js  页面性能分析文件（需要web-vitals库的支持）
-  |- setupTests.js		 组件单元测试文件（需要jest-dom库的支持）
-</code></pre><h4 id="4功能界面的组件化编码流程">4、功能界面的组件化编码流程</h4>
-<ul>
-<li>
-<p>1、拆分组件：拆分界面，抽取组件</p>
-</li>
-<li>
-<p>2、实现静态组件：使用组件实现静态页面效果</p>
-</li>
-<li>
-<p>3、实现动态组件</p>
-<ul>
-<li>
-<p>动态显示初始化数据</p>
-<p>数据类型</p>
-<p>数据名称</p>
-<p>保存在哪个组件？</p>
-</li>
-<li>
-<p>交互（从绑定事件监听开始）</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>示例代码：<a href="https://github.com/zhishouH/learn-react/tree/main/react_staging">react_staging</a></p>
-
+            在windows下，vscode 1.60.0版本修改默认终端为git bash 在windows下，更新了1.60.0版本的vscode后，原有的修改默认终端的配置失效了。 下面为您展示如何在新版本的vscode中修改默认的终端为git bash: 一、找到settings.json配置文件 二、添加配置……
         </div>
-
-        
-<div class="post-archive">
-    <ul class="post-copyright">
-        <li><strong>原文作者：</strong><a rel="author" href="https://www.huangzhishou.com/">黄智守</a></li>
-        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.huangzhishou.com/post/Learn-React-04.html">https://www.huangzhishou.com/post/Learn-React-04.html</a></li>
-        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
-    </ul>
-</div>
-<br/>
-
-
-
-        
-
-<div class="post-archive">
-    <h2>See Also</h2>
-    <ul class="listing">
-        
-        <li><a href="/post/Learn-React-03.html">Learn React 03</a></li>
-        
-        <li><a href="/post/Learn-React-02.html">Learn React 02</a></li>
-        
-        <li><a href="/post/Learn-React-01.html">Learn React 01</a></li>
-        
-        <li><a href="/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html">在windows下，vscode 1.60.0版本修改默认终端为git bash</a></li>
-        
-        <li><a href="/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">Hugo构建个人博客</a></li>
-        
-    </ul>
-</div>
-
-
-        <div class="post-meta meta-tags">
-            
-            <ul class="clearfix">
-                
-                <li><a href='/tags/React'>React</a></li>
-                
-            </ul>
-            
-        </div>
+        <p class="readmore"><a href="https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html">阅读全文</a></p>
     </article>
     
     
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="Hugo构建个人博客">Hugo构建个人博客</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年8月27日
+        </date>
+        
+        <div class="post-content">
+            博客构建之路 一、安装Hugo 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 配置环境变量 二、生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/zhishouH路径： $ hugo new site /e/Desktop/zhishouH 这样就在e/Desdktop/zhis……
+        </div>
+        <p class="readmore"><a href="https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">阅读全文</a></p>
+    </article>
+    
+    
+    
+
+
+
+<ol class="page-navigator">
+    
+    <li class="prev">
+        <a href="https://www.huangzhishou.com/post.html">上一页</a>
+    </li>
+    
 
     
+    <li >
+        <a href="https://www.huangzhishou.com/post.html">1</a>
+    </li>
     
-    <div class="post bg-white">
-      <script src="https://utteranc.es/client.js"
-            repo= "zhishouH/zhishouH.github.io"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-      </script>
-    </div>
+    <li  class="current">
+        <a href="https://www.huangzhishou.com/post/page/2.html">2</a>
+    </li>
     
+
+    
+</ol>
+
+
+
 </div>
 
                     <footer id="footer">
@@ -256,16 +147,6 @@
 </footer>
 
 
-
-<script type="text/javascript">
-    window.MathJax = {
-        tex2jax: {
-            inlineMath: [['$', '$']],
-            processEscapes: true
-        }
-    };
-</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
