@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on 黄智守的博客</title>
+    <link>https://www.huangzhishou.com/tags/JavaScript.html</link>
+    <description>Recent content in JavaScript on 黄智守的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 20 May 2022 09:12:18 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/tags/JavaScript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深入JavaScript高级语法之作用域提升</title>
+      <link>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%90%E5%8D%87.html</link>
+      <pubDate>Fri, 20 May 2022 09:12:18 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%90%E5%8D%87.html</guid>
+      <description>深入JavaScript高级语法之作用域提升 理解 函数执行 作用域链 示例一 1 2 3 4 5 6 7 8 var n = 10 function foo() { n = 20 } foo() console.log(n) // 20 示例二 1 2 3 4 5 6 7 8 9 10 function foo() { console.log(n) var n = 10 console.log(n) } var n = 20 foo() // undefined // 10 示例三 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 var n = 100 function foo1() { console.log(n) } function foo2() { var n = 200 console.log(n) foo1() } foo2() console.log(n) // 200 // 100 // 100 示例四 1 2</description>
+    </item>
+    
+  </channel>
+</rss>
