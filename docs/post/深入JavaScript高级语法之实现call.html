@@ -129,34 +129,50 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#0086b3">Function</span>.prototype.mycall <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">function</span> (thisArg, ...args) {
-	<span style="color:#998;font-style:italic">// 1、获取被执行的函数
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">var</span> fn <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>
-    
-    <span style="color:#998;font-style:italic">// 2、对thisArg转换成对象类型(防止传入非对象类型)
-</span><span style="color:#998;font-style:italic"></span>    thisArg <span style="color:#000;font-weight:bold">=</span> thisArg <span style="color:#000;font-weight:bold">?</span> <span style="color:#0086b3">Object</span>(thisArg) <span style="color:#000;font-weight:bold">:</span> <span style="color:#0086b3">window</span>
-    
-    <span style="color:#998;font-style:italic">// 3、调用被执行的函数
-</span><span style="color:#998;font-style:italic"></span>    thisArg.fn <span style="color:#000;font-weight:bold">=</span> fn
-    <span style="color:#000;font-weight:bold">var</span> result <span style="color:#000;font-weight:bold">=</span> thisArg.fn(...args)
-    <span style="color:#000;font-weight:bold">delete</span> thisArg.fn
-    
-    <span style="color:#998;font-style:italic">// 4、将结果返回
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">return</span> result
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#0086b3">Function</span>.prototype.mycall <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">function</span> (thisArg, ...args <span style="color:#998;font-style:italic">/*剩余参数*/</span>) {
+  <span style="color:#998;font-style:italic">// 获取被执行的函数
+</span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">var</span> fn <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>
+
+  <span style="color:#998;font-style:italic">// 对thisArg转成对象类型(防止传入的是非对象类型)
+</span><span style="color:#998;font-style:italic"></span>  thisArg <span style="color:#000;font-weight:bold">=</span> (thisArg <span style="color:#000;font-weight:bold">!==</span> <span style="color:#000;font-weight:bold">null</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> thisArg <span style="color:#000;font-weight:bold">!==</span> <span style="color:#000;font-weight:bold">undefined</span>) <span style="color:#000;font-weight:bold">?</span> <span style="color:#0086b3">Object</span>(thisArg) <span style="color:#000;font-weight:bold">:</span> <span style="color:#0086b3">window</span>
+
+  <span style="color:#998;font-style:italic">// 调用被执行的函数
+</span><span style="color:#998;font-style:italic"></span>  thisArg.fn <span style="color:#000;font-weight:bold">=</span> fn
+  <span style="color:#000;font-weight:bold">var</span> result <span style="color:#000;font-weight:bold">=</span> thisArg.fn(...args <span style="color:#998;font-style:italic">/* 展开运算符 */</span>)
+  <span style="color:#000;font-weight:bold">delete</span> thisArg.fn
+
+  <span style="color:#998;font-style:italic">// 将结果返回
+</span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">return</span> result
 }
 
+<span style="color:#000;font-weight:bold">var</span> name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;window&#39;</span>
+
 <span style="color:#000;font-weight:bold">function</span> foo() {
-    console.log(<span style="color:#d14">&#39;foo函数被调用了&#39;</span>,<span style="color:#000;font-weight:bold">this</span>)
+  console.log(<span style="color:#d14">&#39;foo函数被执行了&#39;</span>, <span style="color:#000;font-weight:bold">this</span>)
 }
 
 <span style="color:#000;font-weight:bold">function</span> sum(num1, num2) {
-    <span style="color:#000;font-weight:bold">return</span> num1 <span style="color:#000;font-weight:bold">+</span> num2
+  console.log(<span style="color:#d14">&#39;sum函数被执行了&#39;</span>, <span style="color:#000;font-weight:bold">this</span>)
+  <span style="color:#000;font-weight:bold">return</span> num1 <span style="color:#000;font-weight:bold">+</span> num2
 }
 
-foo.mycall() <span style="color:#998;font-style:italic">// foo函数被调用了，window {}
-</span><span style="color:#998;font-style:italic"></span>console.log(sum.mycall(<span style="color:#d14">&#39;sum&#39;</span>, <span style="color:#099">10</span>, <span style="color:#099">20</span>)) <span style="color:#998;font-style:italic">// 30 
+foo.mycall() <span style="color:#998;font-style:italic">// foo函数被执行了, window
+</span><span style="color:#998;font-style:italic"></span>foo.mycall(<span style="color:#d14">&#39;foo&#39;</span>) <span style="color:#998;font-style:italic">// foo函数被执行了, String{ &#39;foo&#39;, fn: f }
+</span><span style="color:#998;font-style:italic"></span>
+sum.mycall() <span style="color:#998;font-style:italic">// sum函数被执行了, window
+</span><span style="color:#998;font-style:italic"></span>sum.mycall(<span style="color:#d14">&#39;sum&#39;</span>) <span style="color:#998;font-style:italic">// sum函数被执行了, String{ &#39;sum&#39;, fn: f }
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">var</span> result <span style="color:#000;font-weight:bold">=</span> sum.mycall(<span style="color:#d14">&#39;sum&#39;</span>, <span style="color:#099">20</span>, <span style="color:#099">30</span>) <span style="color:#998;font-style:italic">// sum函数被执行了, String{ &#39;sum&#39;, fn: f }
+</span><span style="color:#998;font-style:italic"></span>console.log(result) <span style="color:#998;font-style:italic">// 50
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -273,6 +289,14 @@ foo.mycall() <span style="color:#998;font-style:italic">// foo函数被调用了
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0bind.html" title="深入JavaScript高级语法之实现bind">深入JavaScript高级语法之实现bind</a>
+    </li>
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0apply.html" title="深入JavaScript高级语法之实现apply">深入JavaScript高级语法之实现apply</a>
+    </li>
+    
+    <li>
         <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0call.html" title="深入JavaScript高级语法之实现call">深入JavaScript高级语法之实现call</a>
     </li>
     
@@ -304,14 +328,6 @@ foo.mycall() <span style="color:#998;font-style:italic">// foo函数被调用了
         <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%90%E5%8D%87.html" title="深入JavaScript高级语法之作用域提升">深入JavaScript高级语法之作用域提升</a>
     </li>
     
-    <li>
-        <a href="https://www.huangzhishou.com/post/Learn-React-07.html" title="Learn React 07">Learn React 07</a>
-    </li>
-    
-    <li>
-        <a href="https://www.huangzhishou.com/post/Learn-React-06.html" title="Learn React 06">Learn React 06</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -321,7 +337,7 @@ foo.mycall() <span style="color:#998;font-style:italic">// foo函数被调用了
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
     
-    <li><a href="https://www.huangzhishou.com/categories/JavaScript.html">JavaScript (8)</a></li>
+    <li><a href="https://www.huangzhishou.com/categories/JavaScript.html">JavaScript (10)</a></li>
     
     <li><a href="https://www.huangzhishou.com/categories/React.html">React (7)</a></li>
     
