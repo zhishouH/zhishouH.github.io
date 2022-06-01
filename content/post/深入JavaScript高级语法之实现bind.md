@@ -7,6 +7,10 @@ categories: [JavaScript]
 ---
 
 > **深入JavaScript高级语法之实现bind**
+> 
+
+#### 实现一个bind
+
 
 ```javascript
 Function.prototype.mybind = function (thisArg, ...argArray) {

@@ -6,14 +6,32 @@
     <description>Recent content in JavaScript on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 31 May 2022 11:58:46 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/JavaScript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 14:14:29 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/JavaScript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深入JavaScript高级语法之函数柯里化</title>
+      <link>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96.html</link>
+      <pubDate>Wed, 01 Jun 2022 14:14:29 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96.html</guid>
+      <description>深入JavaScript高级语法之函数柯里化 函数柯里化 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 function sum(x) { return function(y) { return function(z) { return x + y + z } } } var result = sum(10)(20)(30) console.log(result) // 60 // 简化柯里化函数 function sum2 = x =&amp;gt; y =&amp;gt; z =&amp;gt; x + y + z console.log(sum2(10)(20)(30)) // 60 函数柯里化 —— 单一职责的原则 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 function add(x, y, z) { x = x + 2 y = y + 2</description>
+    </item>
+    
+    <item>
+      <title>深入JavaScript高级语法之纯函数</title>
+      <link>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%BA%AF%E5%87%BD%E6%95%B0.html</link>
+      <pubDate>Wed, 01 Jun 2022 14:05:33 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%BA%AF%E5%87%BD%E6%95%B0.html</guid>
+      <description>深入JavaScript高级语法之纯函数 纯函数 确定的输入，一定会产生确定的输出 函数在执行过程中，不能产生副作用 1 2 3 4 5 6 7 8 9 10 11 var names = [&amp;#39;abc&amp;#39;, &amp;#39;bbc&amp;#39;, &amp;#39;cbc&amp;#39;, &amp;#39;dbc&amp;#39;] // 纯函数 slice 截取，不会对原数组有所改动 var newNames = names.slice(0, 2) console.log(newNames) // [&amp;#39;abc&amp;#39;, &amp;#39;bbc&amp;#39;] console.lgo(names) // [&amp;#39;abc&amp;#39;, &amp;#39;bbc&amp;#39;, &amp;#39;cbc&amp;#39;, &amp;#39;dbc&amp;#39;] // 非纯函数 splice 截取并删除 var newNames2 = names.splice(2,1) console.log(newNames2) // [&amp;#39;cbc&amp;#39;] console.log(names) // [&amp;#39;abc&amp;#39;, &amp;#39;bbc&amp;#39;, &amp;#39;dbc&amp;#39;] 1 2 3 4 5 6 7 8 9 // 举</description>
+    </item>
+    
     <item>
       <title>深入JavaScript高级语法之实现bind</title>
       <link>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0bind.html</link>
       <pubDate>Tue, 31 May 2022 11:58:46 +0800</pubDate>
       
       <guid>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0bind.html</guid>
-      <description>深入JavaScript高级语法之实现bind 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 Function.prototype.mybind = function (thisArg, ...argArray) { // 获取被执行的函数 var fn = this // 对thisArg转成对象类型(防止传入的是非对象类型) thisArg = (thisArg !== null &amp;amp;&amp;amp; thisArg !== undefined) ? Object(thisArg) : window // 调用被执行的函数 return function (...args) { thisArg.fn = fn var finalArgs = [...argArray, ...args] var result</description>
+      <description>深入JavaScript高级语法之实现bind 实现一个bind 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 Function.prototype.mybind = function (thisArg, ...argArray) { // 获取被执行的函数 var fn = this // 对thisArg转成对象类型(防止传入的是非对象类型) thisArg = (thisArg !== null &amp;amp;&amp;amp; thisArg !== undefined) ? Object(thisArg) : window // 调用被执行的函数 return function (...args) { thisArg.fn =</description>
     </item>
     
     <item>

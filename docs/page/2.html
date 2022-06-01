@@ -73,6 +73,52 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0.html" title="深入JavaScript高级语法之高阶函数">深入JavaScript高级语法之高阶函数</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/JavaScript'>JavaScript</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            深入JavaScript高级语法之高阶函数 高阶函数的定义 函数接受另一个函数作为参数 函数返回另一个函数作为返回值 函数接受另一个函数作为参数 1 2 3 4 5 6 7 8 9 function foo(fn) { fn() } function bar() { console.log(&#39;bar&#39;) } foo(bar) // bar 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 function calc(num1,num2,calcFn) { console.log(calcFn(num1,num2)) } function add(num1,num2) { return num1 + num2 } function sub(num1,num2) { return num1 - num2 } function mul(num1,num2) { return num1 *……
+        </div>
+        <p class="readmore"><a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0.html">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%90%E5%8D%87.html" title="深入JavaScript高级语法之作用域提升">深入JavaScript高级语法之作用域提升</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/JavaScript'>JavaScript</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            深入JavaScript高级语法之作用域提升 理解 函数执行 作用域链 示例一 1 2 3 4 5 6 7 8 var n = 10 function foo() { n = 20 } foo() console.log(n) // 20 示例二 1 2 3 4 5 6 7 8 9 10 function foo() { console.log(n) var n = 10 console.log(n) } var n = 20 foo() // undefined // 10 示例三 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 var n = 100 function foo1() { console.log(n) } function foo2() { var n = 200 console.log(n) foo1() } foo2() console.log(n) // 200 // 100 // 100 示例四 1 2……
+        </div>
+        <p class="readmore"><a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%90%E5%8D%87.html">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.huangzhishou.com/post/Learn-React-07.html" title="Learn React 07">Learn React 07</a>
             </h1>
         </header>
@@ -247,22 +293,6 @@
         <p class="readmore"><a href="https://www.huangzhishou.com/post/%E5%9C%A8windows%E4%B8%8Bvscode-1.60.0%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAgit-bash.html">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="Hugo构建个人博客">Hugo构建个人博客</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2021年8月27日
-        </date>
-        
-        <div class="post-content">
-            博客构建之路 一、安装Hugo 到Hugo Releases下载对应的操作系统版本的Hugo二进制文件(hugo或hugo.exe) 配置环境变量 二、生成站点 使用Hugo快速生成站点，比如希望生成到e/Desktop/zhishouH路径： $ hugo new site /e/Desktop/zhishouH 这样就在e/Desdktop/zhis……
-        </div>
-        <p class="readmore"><a href="https://www.huangzhishou.com/post/Hugo%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -283,7 +313,15 @@
         <a href="https://www.huangzhishou.com/page/2.html">2</a>
     </li>
     
+    <li >
+        <a href="https://www.huangzhishou.com/page/3.html">3</a>
+    </li>
+    
 
+    
+    <li class="next">
+        <a href="https://www.huangzhishou.com/page/3.html">下一页</a>
+    </li>
     
 </ol>
 
@@ -333,6 +371,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96.html" title="深入JavaScript高级语法之函数柯里化">深入JavaScript高级语法之函数柯里化</a>
+    </li>
+    
+    <li>
+        <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%BA%AF%E5%87%BD%E6%95%B0.html" title="深入JavaScript高级语法之纯函数">深入JavaScript高级语法之纯函数</a>
+    </li>
+    
+    <li>
         <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0bind.html" title="深入JavaScript高级语法之实现bind">深入JavaScript高级语法之实现bind</a>
     </li>
     
@@ -364,14 +410,6 @@
         <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95.html" title="深入JavaScript高级语法之数组中的方法">深入JavaScript高级语法之数组中的方法</a>
     </li>
     
-    <li>
-        <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0.html" title="深入JavaScript高级语法之高阶函数">深入JavaScript高级语法之高阶函数</a>
-    </li>
-    
-    <li>
-        <a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%90%E5%8D%87.html" title="深入JavaScript高级语法之作用域提升">深入JavaScript高级语法之作用域提升</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -381,7 +419,7 @@
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
     
-    <li><a href="https://www.huangzhishou.com/categories/JavaScript.html">JavaScript (10)</a></li>
+    <li><a href="https://www.huangzhishou.com/categories/JavaScript.html">JavaScript (12)</a></li>
     
     <li><a href="https://www.huangzhishou.com/categories/React.html">React (7)</a></li>
     
