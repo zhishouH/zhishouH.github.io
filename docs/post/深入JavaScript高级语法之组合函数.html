@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>深入JavaScript高级语法之实现call | 黄智守的博客</title>
-    <meta property="og:title" content="深入JavaScript高级语法之实现call - 黄智守的博客">
+    <title>深入JavaScript高级语法之组合函数 | 黄智守的博客</title>
+    <meta property="og:title" content="深入JavaScript高级语法之组合函数 - 黄智守的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-05-24T17:38:08&#43;08:00'>
+    <meta property="article:published_time" content='2022-06-08T10:52:29&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2022-05-24T17:38:08&#43;08:00'>
+    <meta property="article:modified_time" content='2022-06-08T10:52:29&#43;08:00'>
         
     <meta name="Keywords" content="JavaScript、Vue、React、HTML、CSS、黄智守">
-    <meta name="description" content="深入JavaScript高级语法之实现call">
+    <meta name="description" content="深入JavaScript高级语法之组合函数">
         
     <meta name="author" content="黄智守">
-    <meta property="og:url" content="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0call.html">
+    <meta property="og:url" content="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%BB%84%E5%90%88%E5%87%BD%E6%95%B0.html">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -76,10 +76,10 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">深入JavaScript高级语法之实现call</h1>
+            <h1 class="post-title">深入JavaScript高级语法之组合函数</h1>
         </header>
         <date class="post-meta meta-date">
-            2022年5月24日
+            2022年6月8日
         </date>
         
         <div class="post-meta">
@@ -98,9 +98,48 @@
         
         <div class="post-content">
             <blockquote>
-<p><strong>深入JavaScript高级语法之实现call</strong></p>
+<p><strong>深入JavaScript高级语法之组合函数</strong></p>
 </blockquote>
-<h4 id="实现一个call">实现一个call</h4>
+<h4 id="组合函数">组合函数</h4>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">double</span>(x) {
+	<span style="color:#000;font-weight:bold">return</span> x <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span>
+}
+
+<span style="color:#000;font-weight:bold">function</span> square(y) {
+	<span style="color:#000;font-weight:bold">return</span> y <span style="color:#000;font-weight:bold">**</span> <span style="color:#099">2</span>
+}
+
+<span style="color:#000;font-weight:bold">function</span> composFn(m, n) {
+	<span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">function</span>(count) {
+		<span style="color:#000;font-weight:bold">return</span> n(m(count))
+    }
+}
+
+<span style="color:#000;font-weight:bold">var</span> newFn <span style="color:#000;font-weight:bold">=</span> composFn(<span style="color:#000;font-weight:bold">double</span>, square)
+console.log(newFn(<span style="color:#099">10</span>))  <span style="color:#998;font-style:italic">// 400
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="实现自动化组合函数">实现自动化组合函数</h4>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -131,48 +170,36 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#0086b3">Function</span>.prototype.mycall <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">function</span> (thisArg, ...args <span style="color:#998;font-style:italic">/*剩余参数*/</span>) {
-  <span style="color:#998;font-style:italic">// 获取被执行的函数
-</span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">var</span> fn <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">this</span>
-
-  <span style="color:#998;font-style:italic">// 对thisArg转成对象类型(防止传入的是非对象类型)
-</span><span style="color:#998;font-style:italic"></span>  thisArg <span style="color:#000;font-weight:bold">=</span> (thisArg <span style="color:#000;font-weight:bold">!==</span> <span style="color:#000;font-weight:bold">null</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> thisArg <span style="color:#000;font-weight:bold">!==</span> <span style="color:#000;font-weight:bold">undefined</span>) <span style="color:#000;font-weight:bold">?</span> <span style="color:#0086b3">Object</span>(thisArg) <span style="color:#000;font-weight:bold">:</span> <span style="color:#0086b3">window</span>
-
-  <span style="color:#998;font-style:italic">// 调用被执行的函数
-</span><span style="color:#998;font-style:italic"></span>  thisArg.fn <span style="color:#000;font-weight:bold">=</span> fn
-  <span style="color:#000;font-weight:bold">var</span> result <span style="color:#000;font-weight:bold">=</span> thisArg.fn(...args <span style="color:#998;font-style:italic">/* 展开运算符 */</span>)
-  <span style="color:#000;font-weight:bold">delete</span> thisArg.fn
-
-  <span style="color:#998;font-style:italic">// 将结果返回
-</span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">return</span> result
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">function</span> myCompose(...fns) {
+    <span style="color:#000;font-weight:bold">var</span> length <span style="color:#000;font-weight:bold">=</span> fns.length
+    <span style="color:#000;font-weight:bold">for</span>(<span style="color:#000;font-weight:bold">var</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> length; i<span style="color:#000;font-weight:bold">++</span>) {
+		<span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">typeof</span> fns[i] <span style="color:#000;font-weight:bold">!==</span> <span style="color:#d14">&#39;function&#39;</span>) {
+            <span style="color:#000;font-weight:bold">throw</span> <span style="color:#000;font-weight:bold">new</span> TypeError(<span style="color:#d14">&#34;Expected arguments are functions&#34;</span>)
+        }
+    }
+    <span style="color:#000;font-weight:bold">function</span> compose(...args) {
+        <span style="color:#000;font-weight:bold">var</span> index <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>
+        <span style="color:#000;font-weight:bold">var</span> result <span style="color:#000;font-weight:bold">=</span> length <span style="color:#000;font-weight:bold">?</span> fns[index].apply(<span style="color:#000;font-weight:bold">this</span>, args) <span style="color:#000;font-weight:bold">:</span> args
+       	<span style="color:#000;font-weight:bold">while</span>(<span style="color:#000;font-weight:bold">++</span>index <span style="color:#000;font-weight:bold">&lt;</span> length) {
+			result <span style="color:#000;font-weight:bold">=</span> fns[index].call(<span style="color:#000;font-weight:bold">this</span>, result)
+        }
+        <span style="color:#000;font-weight:bold">return</span> result
+    }
+    result compose
 }
 
-<span style="color:#000;font-weight:bold">var</span> name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;window&#39;</span>
-
-<span style="color:#000;font-weight:bold">function</span> foo() {
-  console.log(<span style="color:#d14">&#39;foo函数被执行了&#39;</span>, <span style="color:#000;font-weight:bold">this</span>)
+<span style="color:#000;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">double</span>(x) {
+	<span style="color:#000;font-weight:bold">return</span> x <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span>
 }
 
-<span style="color:#000;font-weight:bold">function</span> sum(num1, num2) {
-  console.log(<span style="color:#d14">&#39;sum函数被执行了&#39;</span>, <span style="color:#000;font-weight:bold">this</span>)
-  <span style="color:#000;font-weight:bold">return</span> num1 <span style="color:#000;font-weight:bold">+</span> num2
+<span style="color:#000;font-weight:bold">function</span> square(y) {
+	<span style="color:#000;font-weight:bold">return</span> y <span style="color:#000;font-weight:bold">**</span> <span style="color:#099">2</span>
 }
 
-foo.mycall() <span style="color:#998;font-style:italic">// foo函数被执行了, window
-</span><span style="color:#998;font-style:italic"></span>foo.mycall(<span style="color:#d14">&#39;foo&#39;</span>) <span style="color:#998;font-style:italic">// foo函数被执行了, String{ &#39;foo&#39;, fn: f }
-</span><span style="color:#998;font-style:italic"></span>
-sum.mycall() <span style="color:#998;font-style:italic">// sum函数被执行了, window
-</span><span style="color:#998;font-style:italic"></span>sum.mycall(<span style="color:#d14">&#39;sum&#39;</span>) <span style="color:#998;font-style:italic">// sum函数被执行了, String{ &#39;sum&#39;, fn: f }
-</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">var</span> result <span style="color:#000;font-weight:bold">=</span> sum.mycall(<span style="color:#d14">&#39;sum&#39;</span>, <span style="color:#099">20</span>, <span style="color:#099">30</span>) <span style="color:#998;font-style:italic">// sum函数被执行了, String{ &#39;sum&#39;, fn: f }
-</span><span style="color:#998;font-style:italic"></span>console.log(result) <span style="color:#998;font-style:italic">// 50
+<span style="color:#000;font-weight:bold">var</span> newFn <span style="color:#000;font-weight:bold">=</span> myCompose(<span style="color:#000;font-weight:bold">double</span>, square)
+console.log(newFn(<span style="color:#099">10</span>)) <span style="color:#998;font-style:italic">// 400
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -182,7 +209,7 @@ sum.mycall() <span style="color:#998;font-style:italic">// sum函数被执行了
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://www.huangzhishou.com/">黄智守</a></li>
-        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0call.html">https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0call.html</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%BB%84%E5%90%88%E5%87%BD%E6%95%B0.html">https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%BB%84%E5%90%88%E5%87%BD%E6%95%B0.html</a></li>
         <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
     </ul>
 </div>
@@ -196,15 +223,15 @@ sum.mycall() <span style="color:#998;font-style:italic">// sum函数被执行了
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%85%B3%E4%BA%8Ethis%E7%9A%84%E7%BB%83%E4%B9%A0%E9%A2%98.html">深入JavaScript高级语法之关于this的练习题</a></li>
+        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E6%9F%AF%E9%87%8C%E5%8C%96%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0.html">深入JavaScript高级语法之柯里化函数的实现</a></li>
         
-        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8.html">深入JavaScript高级语法之箭头函数的使用</a></li>
+        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96.html">深入JavaScript高级语法之函数柯里化</a></li>
         
-        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8Bthis%E7%9A%84%E7%BB%91%E5%AE%9A%E8%A7%84%E5%88%99.html">深入JavaScript高级语法之this的绑定规则</a></li>
+        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E7%BA%AF%E5%87%BD%E6%95%B0.html">深入JavaScript高级语法之纯函数</a></li>
         
-        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E9%97%AD%E5%8C%85.html">深入JavaScript高级语法之闭包</a></li>
+        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0bind.html">深入JavaScript高级语法之实现bind</a></li>
         
-        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95.html">深入JavaScript高级语法之数组中的方法</a></li>
+        <li><a href="/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%AE%9E%E7%8E%B0apply.html">深入JavaScript高级语法之实现apply</a></li>
         
     </ul>
 </div>
