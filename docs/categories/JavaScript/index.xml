@@ -6,7 +6,16 @@
     <description>Recent content in JavaScript on 黄智守的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Jun 2022 10:10:42 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/JavaScript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Jun 2022 11:41:39 +0800</lastBuildDate><atom:link href="https://www.huangzhishou.com/categories/JavaScript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深入JavaScript高级语法之创建对象方案</title>
+      <link>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%A1%88.html</link>
+      <pubDate>Fri, 17 Jun 2022 11:41:39 +0800</pubDate>
+      
+      <guid>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%A1%88.html</guid>
+      <description>深入JavaScript高级语法之创建对象方案 原型与构造函数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 function Person(name, age, height, address) { this.name = name this.age = age this.height = height this.address = address } Person.prototype.eating = function() { console.log(this.name + &amp;#39;在吃东西&amp;#39;) } Person.prototype.running = function() { console.log(this.name + &amp;#39;在跑步&amp;#39;) } var p1 = new Person(&amp;#39;zhishouh&amp;#39;, 20, 1.88, &amp;#39;广州市&amp;#39;) var p2 = new Person(&amp;#39;hn&amp;#39;, 21,</description>
+    </item>
+    
     <item>
       <title>深入JavaScript高级语法之创建对象</title>
       <link>https://www.huangzhishou.com/post/%E6%B7%B1%E5%85%A5JavaScript%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1.html</link>
